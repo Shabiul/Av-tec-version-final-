@@ -3,7 +3,7 @@
  * The number is read from NEXT_PUBLIC_WHATSAPP_NUMBER (digits only, incl. country
  * code, e.g. 919876543210). Falls back to a placeholder until the client sets it.
  */
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919876543210';
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '917975784962';
 const PREFILL = 'Hi AV-TEC, I would like a quote';
 
 export default function WhatsAppFloat() {

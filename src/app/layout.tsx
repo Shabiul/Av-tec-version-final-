@@ -78,8 +78,8 @@ const organizationJsonLd = {
   image: `${SITE_URL}/og-image.png`,
   description: DESCRIPTION,
   foundingDate: "1992",
-  telephone: "+91-98765-43210",
-  email: ["avtecbalaji04@gmail.com", "avtecilangovan@gmail.com"],
+  telephone: "+91-79757-84962",
+  email: ["ilangovan@avtecindia.com", "ramesh@avtecindia.com"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bengaluru",

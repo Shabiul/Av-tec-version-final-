@@ -25,13 +25,13 @@ export default function ContactPage() {
           <div className="contact-info">
             <div className="contact-info-card">
               <h4>Phone</h4>
-              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+              <p><a href="tel:+917975784962">+91 79757 84962</a></p>
             </div>
             <div className="contact-info-card">
               <h4>Email</h4>
               <p style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <a href="mailto:avtecbalaji04@gmail.com">avtecbalaji04@gmail.com</a>
-                <a href="mailto:avtecilangovan@gmail.com">avtecilangovan@gmail.com</a>
+                <a href="mailto:ilangovan@avtecindia.com">ilangovan@avtecindia.com</a>
+                <a href="mailto:ramesh@avtecindia.com">ramesh@avtecindia.com</a>
               </p>
             </div>
             <div className="contact-info-card">

@@ -40,7 +40,7 @@ export default function TermsPage() {
           <h2 className="heading-crimson">Contact</h2>
           <p>
             For questions about these terms, contact us at{' '}
-            <a href="mailto:hello@av-tec.in">hello@av-tec.in</a>.
+            <a href="mailto:ilangovan@avtecindia.com">ilangovan@avtecindia.com</a>.
           </p>
         </div>
       </section>

@@ -49,11 +49,11 @@ export default function Footer() {
         <div className="footer-address">
           <div className="footer-address-line1">Bengaluru, Karnataka, India</div>
           <div className="footer-address-line2">
-            <a href="tel:+919876543210">+91 98765 43210</a>
+            <a href="tel:+917975784962">+91 79757 84962</a>
             <span className="footer-sep">•</span>
-            <a href="mailto:avtecbalaji04@gmail.com">avtecbalaji04@gmail.com</a>
+            <a href="mailto:ilangovan@avtecindia.com">ilangovan@avtecindia.com</a>
             <span className="footer-sep">•</span>
-            <a href="mailto:avtecilangovan@gmail.com">avtecilangovan@gmail.com</a>
+            <a href="mailto:ramesh@avtecindia.com">ramesh@avtecindia.com</a>
           </div>
         </div>
         <p className="footer-copy">&copy; {new Date().getFullYear()} AV-TEC. All rights reserved.</p>
