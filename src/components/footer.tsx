@@ -47,8 +47,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-address">
-          Bengaluru, Karnataka, India<br />
-          <a href="tel:+919876543210">+91 98765 43210</a> &nbsp;|&nbsp; <a href="mailto:hello@av-tec.in">hello@av-tec.in</a>
+          <div className="footer-address-line1">Bengaluru, Karnataka, India</div>
+          <div className="footer-address-line2">
+            <a href="tel:+919876543210">+91 98765 43210</a>
+            <span className="footer-sep">•</span>
+            <a href="mailto:avtecbalaji04@gmail.com">avtecbalaji04@gmail.com</a>
+            <span className="footer-sep">•</span>
+            <a href="mailto:avtecilangovan@gmail.com">avtecilangovan@gmail.com</a>
+          </div>
         </div>
         <p className="footer-copy">&copy; {new Date().getFullYear()} AV-TEC. All rights reserved.</p>
       </div>

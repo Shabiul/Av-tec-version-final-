@@ -174,6 +174,12 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
             name="date"
             type="date"
             min={minDate}
+            onClick={(e) => {
+              try { e.currentTarget.showPicker(); } catch {}
+            }}
+            onFocus={(e) => {
+              try { e.currentTarget.showPicker(); } catch {}
+            }}
             aria-required="true"
             aria-invalid={!!errors.date}
             aria-describedby={errors.date ? 'err-date' : undefined}

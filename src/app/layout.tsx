@@ -79,7 +79,7 @@ const organizationJsonLd = {
   description: DESCRIPTION,
   foundingDate: "1992",
   telephone: "+91-98765-43210",
-  email: "hello@av-tec.in",
+  email: ["avtecbalaji04@gmail.com", "avtecilangovan@gmail.com"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bengaluru",
@@ -90,6 +90,8 @@ const organizationJsonLd = {
   sameAs: [],
 };
 
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})()`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -97,6 +99,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <script
           type="application/ld+json"

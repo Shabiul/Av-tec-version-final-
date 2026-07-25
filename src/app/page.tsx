@@ -91,7 +91,7 @@ export default function Home() {
           ))}
         </div>
         <div style={{ textAlign: 'center', marginTop: '32px' }}>
-          <Link href="/services" className="btn-pill">All Services</Link>
+          <Link href="/services" className="btn-pill btn-all-services">All Services</Link>
         </div>
       </section>
 
@@ -116,16 +116,16 @@ export default function Home() {
 
       {/* ═══ TESTIMONIAL HIGHLIGHT ═══ */}
       <section className="section testimonials-section">
-        <div className="section-bg"><img src="/assets/images/gallery/festival-night-show.jpg" alt="" aria-hidden="true" loading="lazy" /></div>
+        <div className="section-bg"><img src="/assets/images/gallery/festival-night-show.jpg" alt="AV-TEC event stage" aria-hidden="true" loading="lazy" /></div>
         <div className="testimonial-content">
-          <span className="eyebrow">Testimonials</span>
+          <span className="eyebrow">TESTIMONIALS</span>
           <h2>What Our Clients Say</h2>
           <p className="testimonial-quote">&ldquo;{t.quote}&rdquo;</p>
           <div className="testimonial-avatar">{t.initials}</div>
           <p className="testimonial-name">{t.name}</p>
           <p className="testimonial-role">{t.role}</p>
-          <div style={{ marginTop: '28px' }}>
-            <Link href="/work" className="btn-pill">See Proof of Work</Link>
+          <div>
+            <Link href="/work" className="btn-testimonial-cta">SEE PROOF OF WORK</Link>
           </div>
         </div>
       </section>

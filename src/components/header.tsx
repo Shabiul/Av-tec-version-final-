@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -21,7 +22,17 @@ export default function Header() {
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    let isScrolled = false;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (!isScrolled && y > 50) {
+        isScrolled = true;
+        setScrolled(true);
+      } else if (isScrolled && y < 20) {
+        isScrolled = false;
+        setScrolled(false);
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -34,7 +45,7 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="header-inner">
-<Link href="/" className="header-brand">
+        <Link href="/" className="header-brand">
           <img
             className="header-logo"
             src="/assets/images/logos/logo-web.png"
@@ -60,6 +71,9 @@ export default function Header() {
             {l.label}
           </Link>
         ))}
+        <div style={{ padding: '0 12px', display: 'flex', alignItems: 'center' }}>
+          <ThemeToggle />
+        </div>
       </nav>
       <button
         className={`menu-toggle ${menuOpen ? 'is-open' : ''}`}

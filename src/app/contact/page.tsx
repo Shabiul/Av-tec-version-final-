@@ -29,7 +29,10 @@ export default function ContactPage() {
             </div>
             <div className="contact-info-card">
               <h4>Email</h4>
-              <p><a href="mailto:hello@av-tec.in">hello@av-tec.in</a></p>
+              <p style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <a href="mailto:avtecbalaji04@gmail.com">avtecbalaji04@gmail.com</a>
+                <a href="mailto:avtecilangovan@gmail.com">avtecilangovan@gmail.com</a>
+              </p>
             </div>
             <div className="contact-info-card">
               <h4>Address</h4>
