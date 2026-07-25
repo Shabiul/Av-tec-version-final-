@@ -48,8 +48,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   manifest: "/site.webmanifest",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/assets/images/logos/logo-web.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/assets/images/logos/logo-web.png",
   },
   openGraph: {
     type: "website",
