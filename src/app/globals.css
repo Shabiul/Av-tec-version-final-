@@ -99,8 +99,8 @@ button, input, textarea, select { font: inherit; }
 .header-logo { height: 190px; width: auto; object-fit: contain; }
 .is-scrolled .header-logo { height: 130px; }
 .header-tagline {
-  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.18em; color: var(--muted);
+  font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--gold);
   white-space: nowrap; line-height: 1.1;
 }
 .is-scrolled .header-tagline { display: none; }

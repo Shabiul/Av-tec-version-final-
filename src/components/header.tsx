@@ -42,7 +42,7 @@ export default function Header() {
             width="180"
             height="183"
           />
-          <span className="header-tagline">Audio Visual & Event Technology Since 1992</span>
+          <span className="header-tagline">Where Innovation Meets Experiences</span>
         </Link>
       </div>
       <nav
