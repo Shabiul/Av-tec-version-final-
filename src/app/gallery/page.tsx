@@ -22,12 +22,30 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const imageGalleryJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageGallery',
+  name: 'AV-TEC Audio Visual Event & Equipment Gallery',
+  description: 'Live event photos, stage lighting setups, D&B audio systems, and LED video wall installations.',
+  url: 'https://www.avtecindia.com/gallery',
+  image: GALLERY_IMAGES.map((img) => ({
+    '@type': 'ImageObject',
+    contentUrl: `https://www.avtecindia.com${img.src}`,
+    name: img.title,
+    caption: img.equipment || img.service,
+  })),
+};
+
 export default function GalleryPage() {
   return (
     <div className="page-wrapper">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGalleryJsonLd) }}
       />
       <PageHero
         eyebrow="Our Work"

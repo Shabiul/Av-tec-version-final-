@@ -1,7 +1,7 @@
 import PageHero from '@/components/PageHero';
 
 export const metadata = {
-  title: 'Terms & Conditions',
+  title: 'Terms & Conditions | AV-TEC',
   description: 'Terms and conditions for AV-TEC equipment rental, event production, and enquiry services.',
   alternates: { canonical: '/terms' },
   robots: { index: false, follow: true },

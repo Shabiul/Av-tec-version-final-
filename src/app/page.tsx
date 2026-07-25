@@ -10,7 +10,7 @@ import CountUp from '@/components/CountUp';
 
 const STATS = [
   { num: '30+', label: 'Years' },
-  { num: '2000+', label: 'Events Delivered' },
+  { num: '4000+', label: 'Events Delivered' },
   { num: '40+', label: 'Cities Served' },
 ];
 
