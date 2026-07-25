@@ -3,11 +3,9 @@ import { validateEnquiry } from '@/lib/enquiry';
 
 export const runtime = 'nodejs';
 
-const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
-
 export async function POST(request: NextRequest) {
-  const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
-  if (!accessKey) {
+  const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+  if (!webhookUrl) {
     return NextResponse.json(
       {
         ok: false,
@@ -44,12 +42,15 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const res = await fetch(WEB3FORMS_ENDPOINT, {
+    const res = await fetch(webhookUrl, {
       method: 'POST',
-      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
+      // Apps Script web apps issue a 302 redirect to the actual execution
+      // result on success — follow it rather than treating it as a failure.
+      redirect: 'follow',
       body: JSON.stringify({
-        access_key: accessKey,
         subject: body.subject ?? 'New AV-TEC Enquiry',
+        timestamp: new Date().toISOString(),
         name: normalized.name,
         company: normalized.company,
         email: normalized.email,
@@ -62,7 +63,8 @@ export async function POST(request: NextRequest) {
       }),
     });
 
-    if (res.ok) {
+    const json = await res.json().catch(() => null);
+    if (res.ok && json?.result !== 'error') {
       return NextResponse.json({ ok: true });
     }
 
