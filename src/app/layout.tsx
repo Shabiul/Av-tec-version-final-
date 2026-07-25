@@ -53,6 +53,9 @@ export const metadata: Metadata = {
   publisher: "AV-TEC",
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
   manifest: "/site.webmanifest",
   icons: {
     icon: "/assets/images/logos/logo-web.png",
