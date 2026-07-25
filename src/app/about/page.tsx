@@ -110,7 +110,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ CLOSING CTA ═══ */}
-      <section className="section deep-section about-cta-section">
+      <section className="section about-cta-section">
         <div className="section-center" style={{ maxWidth: '720px' }}>
           <h2 className="about-cta-title" style={{ color: '#000000' }}>Let&apos;s Work Together</h2>
           <p className="about-cta-text" style={{ color: '#000000' }}>
