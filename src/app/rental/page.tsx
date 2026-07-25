@@ -70,11 +70,11 @@ export default function RentalPage() {
       </section>
 
       {/* ═══ INQUIRY FORM ═══ */}
-      <section className="section deep-section">
+      <section className="section rental-form-section">
         <div className="contact-inner">
           <span className="eyebrow" style={{ color: 'var(--orange)' }}>Rental Inquiry</span>
-          <h2>Request a Quote</h2>
-          <p className="contact-subtitle">Share your event details and equipment needs — we&apos;ll get back with a tailored quote.</p>
+          <h2 style={{ color: '#000000' }}>Request a Quote</h2>
+          <p className="contact-subtitle" style={{ color: '#000000' }}>Share your event details and equipment needs — we&apos;ll get back with a tailored quote.</p>
           <ContactForm subject="New AV-TEC Rental Inquiry" />
         </div>
       </section>
