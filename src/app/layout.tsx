@@ -80,7 +80,7 @@ const organizationJsonLd = {
   description: DESCRIPTION,
   foundingDate: "1992",
   telephone: "+91-79757-84962",
-  email: ["ilangovan@avtecindia.com", "ramesh@avtecindia.com", "balaji@avtecindia.com"],
+  email: ["ilangovan@avtecindia.com", "balaji@avtecindia.com"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bengaluru",

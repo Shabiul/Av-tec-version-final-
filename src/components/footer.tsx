@@ -54,8 +54,6 @@ export default function Footer() {
             <span className="footer-sep">•</span>
             <a href="mailto:ilangovan@avtecindia.com">ilangovan@avtecindia.com</a>
             <span className="footer-sep">•</span>
-            <a href="mailto:ramesh@avtecindia.com">ramesh@avtecindia.com</a>
-            <span className="footer-sep">•</span>
             <a href="mailto:balaji@avtecindia.com">balaji@avtecindia.com</a>
           </div>
         </div>

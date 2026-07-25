@@ -48,7 +48,6 @@ export default function ContactPage() {
               <h4>Email</h4>
               <p style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                 <a href="mailto:ilangovan@avtecindia.com">ilangovan@avtecindia.com</a>
-                <a href="mailto:ramesh@avtecindia.com">ramesh@avtecindia.com</a>
                 <a href="mailto:balaji@avtecindia.com">balaji@avtecindia.com</a>
               </p>
             </div>

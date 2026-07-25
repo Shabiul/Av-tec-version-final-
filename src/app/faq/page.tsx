@@ -35,7 +35,7 @@ const FAQS = [
   },
   {
     q: 'How can I request a customized quote for my event?',
-    a: 'You can submit an inquiry directly on our website at avtecevents.com/contact, call our team at +91 79757 84962, or email us at ilangovan@avtecindia.com, ramesh@avtecindia.com, or balaji@avtecindia.com. Our technical team responds with a detailed proposal within one business hour.',
+    a: 'You can submit an inquiry directly on our website at avtecevents.com/contact, call our team at +91 79757 84962, or email us at ilangovan@avtecindia.com or balaji@avtecindia.com. Our technical team responds with a detailed proposal within one business hour.',
   },
 ];
 
