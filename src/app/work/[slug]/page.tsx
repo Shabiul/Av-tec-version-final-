@@ -33,8 +33,22 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
     equipment: '',
   }));
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
+      { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://avtecevents.com/work' },
+      { '@type': 'ListItem', position: 3, name: c.title, item: `https://avtecevents.com/work/${slug}` },
+    ],
+  };
+
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero eyebrow={`${c.city} · ${c.date}`} title={c.title} subtitle={c.services.join(' · ')} bg={c.heroImage} />
 
       {/* ═══ META ═══ */}

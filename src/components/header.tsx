@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { label: 'Gallery', href: '/gallery' },
   { label: 'Work', href: '/work' },
   { label: 'Rental', href: '/rental' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
 ];
 

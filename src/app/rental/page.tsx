@@ -2,10 +2,14 @@ import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Rental Inquiry',
-  description: 'Rent professional sound, lighting, video and LED equipment — with delivery, setup and technical crew for events across India.',
+  title: 'Event Equipment Rental Bengaluru | Sound, Light & Screen Rental | AV-TEC',
+  description: 'Rent professional D&B sound systems, stage lighting, LED video walls & audio visual gear in Bengaluru and across India. Complete setup with technical crew.',
   alternates: { canonical: '/rental' },
-  openGraph: { url: '/rental', title: 'Rental Inquiry | AV-TEC', description: 'Rent professional sound, lighting, video and LED equipment — with delivery, setup and technical crew for events across India.' },
+  openGraph: {
+    url: '/rental',
+    title: 'Event Equipment Rental Bengaluru | AV-TEC',
+    description: 'Rent professional D&B sound systems, stage lighting, LED video walls & audio visual gear in Bengaluru and across India.',
+  },
 };
 
 const EVENT_TYPES = ['Concerts', 'Weddings', 'Corporate', 'Festivals', 'Exhibitions', 'Medical Conferences'];
@@ -16,9 +20,22 @@ const INCLUDES = [
   { title: 'Crew & Delivery', desc: 'Transport, rigging, setup, operation and strike — handled by our team.' },
 ];
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
+    { '@type': 'ListItem', position: 2, name: 'Rental', item: 'https://avtecevents.com/rental' },
+  ],
+};
+
 export default function RentalPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 <PageHero
         eyebrow="Rental"
         title="Equipment Rental & Event Production"

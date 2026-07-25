@@ -3,15 +3,19 @@ import PageHero from '@/components/PageHero';
 import CountUp from '@/components/CountUp';
 
 export const metadata = {
-  title: 'About',
-  description: 'AV-TEC — Audio Visual & Event Technology since 1992. Based in Bengaluru, serving events across the country.',
+  title: 'About AV-TEC | Event Production & AV Rental Bengaluru',
+  description: 'Founded in 1992, AV-TEC delivers world-class sound systems, stage lighting, LED video walls & technical support for 4000+ events across Bengaluru and India.',
   alternates: { canonical: '/about' },
-  openGraph: { url: '/about', title: 'About | AV-TEC', description: 'AV-TEC — Audio Visual & Event Technology since 1992. Based in Bengaluru, serving events across the country.' },
+  openGraph: {
+    url: '/about',
+    title: 'About AV-TEC | Event Production & AV Rental Bengaluru',
+    description: 'Founded in 1992, AV-TEC delivers world-class sound systems, stage lighting, LED video walls & technical support for 4000+ events across Bengaluru and India.',
+  },
 };
 
 const STATS = [
   { num: '30+', label: 'Years' },
-  { num: '2000+', label: 'Events Delivered' },
+  { num: '4000+', label: 'Events Delivered' },
   { num: '40+', label: 'Cities Served' },
   { num: '24/7', label: 'On-Site Support' },
 ];
@@ -27,9 +31,22 @@ const DIFFERENTIATORS = [
   { title: 'Straightforward Advice', desc: 'We recommend the right solution for your event and budget — no overselling.' },
 ];
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://avtecevents.com/about' },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow="About Us"
         title="Audio Visual & Event Technology Since 1992"

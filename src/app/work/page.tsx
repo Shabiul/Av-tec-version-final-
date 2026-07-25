@@ -5,15 +5,19 @@ import { CASE_STUDIES } from '@/data/case-studies';
 import { TESTIMONIALS } from '@/data/testimonials';
 
 export const metadata = {
-  title: 'Our Work',
-  description: 'Proof of work — featured productions, marquee equipment, and client reviews from 30+ years of AV-TEC events.',
+  title: 'Event Case Studies & Production Portfolio | AV-TEC India',
+  description: 'Explore featured AV productions, D&B line array concerts, corporate launches, and client reviews from 30+ years of AV-TEC events.',
   alternates: { canonical: '/work' },
-  openGraph: { url: '/work', title: 'Our Work | AV-TEC', description: 'Proof of work — featured productions, marquee equipment, and client reviews from 30+ years of AV-TEC events.' },
+  openGraph: {
+    url: '/work',
+    title: 'Event Case Studies & Production Portfolio | AV-TEC India',
+    description: 'Explore featured AV productions, D&B line array concerts, corporate launches, and client reviews from 30+ years of AV-TEC events.',
+  },
 };
 
 const STATS = [
   { num: '30+', label: 'Years' },
-  { num: '2000+', label: 'Events' },
+  { num: '4000+', label: 'Events' },
   { num: '40+', label: 'Cities' },
   { num: '50k', label: 'Peak Audience' },
 ];
@@ -30,9 +34,22 @@ function Stars({ n = 5 }: { n?: number }) {
   );
 }
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
+    { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://avtecevents.com/work' },
+  ],
+};
+
 export default function WorkPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow="Proof of Work"
         title="Our Work"

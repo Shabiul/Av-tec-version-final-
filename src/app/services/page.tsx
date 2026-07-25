@@ -16,15 +16,32 @@ const DIVISIONS = [
 ];
 
 export const metadata = {
-  title: 'Services',
-  description: 'Audio, lighting, video & LED, trussing, installations, and technical consultancy for events across India.',
+  title: 'AV Equipment Rental & Event Production Services | AV-TEC',
+  description: 'Full range of audio visual services: sound reinforcement, stage lighting, LED video walls, stage trussing, installations, and technical consultancy in India.',
   alternates: { canonical: '/services' },
-  openGraph: { url: '/services', title: 'Services | AV-TEC', description: 'Audio, lighting, video & LED, trussing, installations, and technical consultancy for events across India.' },
+  openGraph: {
+    url: '/services',
+    title: 'AV Equipment Rental & Event Production Services | AV-TEC',
+    description: 'Full range of audio visual services: sound reinforcement, stage lighting, LED video walls, stage trussing, installations, and technical consultancy in India.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://avtecevents.com/services' },
+  ],
 };
 
 export default function ServicesPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow="Our Services"
         title="Practical AV Support for Real Events"

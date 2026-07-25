@@ -2,15 +2,32 @@ import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Contact',
-  description: 'Get in touch with AV-TEC for event technology, equipment rental, installations and technical support across India.',
+  title: 'Contact AV-TEC | AV Rental & Technical Support Bengaluru',
+  description: 'Get in touch with AV-TEC for event technology, sound systems, LED wall rentals, installations and technical support across Bengaluru and India.',
   alternates: { canonical: '/contact' },
-  openGraph: { url: '/contact', title: 'Contact | AV-TEC', description: 'Get in touch with AV-TEC for event technology, equipment rental, installations and technical support across India.' },
+  openGraph: {
+    url: '/contact',
+    title: 'Contact AV-TEC | AV Rental & Technical Support Bengaluru',
+    description: 'Get in touch with AV-TEC for event technology, sound systems, LED wall rentals, installations and technical support across India.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://avtecevents.com/contact' },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow="Get In Touch"
         title="Let's Plan Your Event"
