@@ -110,15 +110,15 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ CLOSING CTA ═══ */}
-      <section className="section deep-section">
+      <section className="section deep-section about-cta-section">
         <div className="section-center" style={{ maxWidth: '720px' }}>
-          <h2 className="heading-crimson">Let&apos;s Work Together</h2>
-          <p className="section-lead">
+          <h2 className="about-cta-title">Let&apos;s Work Together</h2>
+          <p className="about-cta-text">
             World-class equipment brought together with local know-how and a personal, dependable approach.
           </p>
           <div className="hero-actions" style={{ marginTop: '32px' }}>
             <Link href="/services" className="btn-pill btn-crimson">Our Services</Link>
-            <Link href="/contact" className="btn-pill">Get in Touch</Link>
+            <Link href="/contact" className="btn-pill btn-dark-text">Get in Touch</Link>
           </div>
         </div>
       </section>

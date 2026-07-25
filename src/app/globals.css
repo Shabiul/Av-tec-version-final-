@@ -1582,6 +1582,24 @@ body.no-scroll { overflow: hidden; }
   }
 }
 
+/* ===== ABOUT CLOSING CTA SECTION ===== */
+.about-cta-section .about-cta-title,
+.about-cta-section .about-cta-text,
+.about-cta-section h2,
+.about-cta-section p {
+  color: #000000 !important;
+}
+
+.btn-pill.btn-dark-text {
+  color: #000000 !important;
+  border-color: rgba(0, 0, 0, 0.4) !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+.btn-pill.btn-dark-text:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
 
 
 
