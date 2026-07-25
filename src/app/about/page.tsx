@@ -26,7 +26,7 @@ const DIVISIONS = [
 ];
 
 const DIFFERENTIATORS = [
-  { title: 'Marquee Inventory', desc: 'D&B audiotechnik, DiGiCo, Robe, grandMA3 and more — the same gear used at the world’s biggest shows.' },
+  { title: 'Marquee Inventory', desc: 'D&B audiotechnik, Martin Audio, Avid, Allen & Heath, Shure, Sennheiser, Electro-Voice, Oliver System Limited, Teleprompter, Quiz Buzzer, and Clear Communication units — world-class gear for events of any scale.' },
   { title: 'Steady Technical Crew', desc: 'Certified engineers and riggers who plan ahead and stay calm under show pressure.' },
   { title: 'Straightforward Advice', desc: 'We recommend the right solution for your event and budget — no overselling.' },
 ];

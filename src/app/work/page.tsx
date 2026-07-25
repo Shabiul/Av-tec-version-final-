@@ -22,7 +22,19 @@ const STATS = [
   { num: '50k', label: 'Peak Audience' },
 ];
 
-const MARQUEE = ['D&B audiotechnik', 'DiGiCo', 'Robe', 'grandMA3', 'Prolyte', 'Blackmagic', 'Shure', 'Disguise'];
+const MARQUEE = [
+  'D&B audiotechnik',
+  'Martin Audio',
+  'Avid',
+  'Allen & Heath',
+  'Shure',
+  'Sennheiser',
+  'Electro-Voice',
+  'Oliver System Limited',
+  'Teleprompter',
+  'Quiz Buzzer',
+  'Clear Communication Units',
+];
 
 function Stars({ n = 5 }: { n?: number }) {
   return (
