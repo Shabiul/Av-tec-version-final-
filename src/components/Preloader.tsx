@@ -18,11 +18,11 @@ export default function Preloader() {
           clearInterval(interval);
           return 100;
         }
-        // Increment by 1-2% every tick (~4.5 to 5 seconds total)
-        const diff = Math.random() > 0.4 ? 1 : 2;
+        // Increment by 1-2% every tick (~2.5 to 3 seconds total)
+        const diff = Math.random() > 0.3 ? 1 : 2;
         return Math.min(prev + diff, 100);
       });
-    }, 45);
+    }, 28);
 
     return () => {
       clearInterval(interval);
