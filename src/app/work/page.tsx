@@ -50,8 +50,8 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
-    { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://avtecevents.com/work' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://www.avtecindia.com/work' },
   ],
 };
 

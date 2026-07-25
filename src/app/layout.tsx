@@ -18,28 +18,35 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const SITE_URL = "https://avtecevents.com";
-const SITE_NAME = "AV-TEC";
+const SITE_URL = "https://www.avtecindia.com";
+const SITE_NAME = "AV-TEC (avtecindia.com)";
 const DESCRIPTION =
-  "Professional audio visual and event technology solutions since 1992. Sound systems, stage lighting, LED video walls, conference AV, equipment rental, and on-site technical support for events across India.";
+  "AV-TEC (avtecindia.com) - Premier audio visual and event technology solutions since 1992. Sound system rental, stage lighting, LED video walls, conference AV, equipment rental, and technical support across Bengaluru and India.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "AV-TEC | Audio Visual & Event Technology Since 1992",
-    template: "%s | AV-TEC",
+    default: "AV-TEC | Audio Visual & Event Technology Bengaluru India | avtecindia.com",
+    template: "%s | AV-TEC India",
   },
   description: DESCRIPTION,
   keywords: [
     "AV-TEC",
+    "AV TEC",
+    "AV TEC India",
+    "AV-TEC India",
+    "avtecindia",
+    "avtecindia.com",
+    "www.avtecindia.com",
+    "AV-TEC Audio Visual",
     "audio visual company India",
     "event technology Bengaluru",
-    "sound system rental",
-    "stage lighting rental",
-    "LED video wall rental",
-    "event production company",
+    "sound system rental Bengaluru",
+    "stage lighting rental India",
+    "LED video wall rental Bengaluru",
+    "event production company India",
     "AV equipment rental India",
-    "conference AV services",
+    "conference AV services Bengaluru",
   ],
   authors: [{ name: "AV-TEC" }],
   creator: "AV-TEC",
@@ -55,15 +62,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: SITE_NAME,
-    title: "AV-TEC | Audio Visual & Event Technology Since 1992",
+    siteName: "AV-TEC India",
+    title: "AV-TEC | Audio Visual & Event Technology Bengaluru India",
     description: DESCRIPTION,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AV-TEC" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AV-TEC India" }],
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AV-TEC | Audio Visual & Event Technology Since 1992",
+    title: "AV-TEC | Audio Visual & Event Technology Bengaluru India",
     description: DESCRIPTION,
     images: ["/og-image.png"],
   },
@@ -74,7 +81,14 @@ const organizationJsonLd = {
   "@type": "LocalBusiness",
   "@id": `${SITE_URL}/#organization`,
   name: "AV-TEC",
-  alternateName: "AV-TEC Audio Visual & Event Technology",
+  alternateName: [
+    "AV TEC",
+    "AV-TEC India",
+    "AV TEC India",
+    "avtecindia",
+    "avtecindia.com",
+    "AV-TEC Audio Visual & Event Technology"
+  ],
   url: SITE_URL,
   logo: `${SITE_URL}/assets/images/logos/logo-web.png`,
   image: `${SITE_URL}/og-image.png`,
@@ -89,7 +103,10 @@ const organizationJsonLd = {
     addressCountry: "IN",
   },
   areaServed: "IN",
-  sameAs: [],
+  sameAs: [
+    "https://www.avtecindia.com",
+    "https://github.com/Shabiul/Av-tec-version-final-"
+  ],
 };
 
 const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})()`;

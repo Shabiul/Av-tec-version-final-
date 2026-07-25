@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { SERVICE_LIST } from '@/data/services';
 import { CASE_STUDIES } from '@/data/case-studies';
 
-const SITE_URL = 'https://avtecevents.com';
+const SITE_URL = 'https://www.avtecindia.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

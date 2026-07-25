@@ -17,8 +17,8 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
-    { '@type': 'ListItem', position: 2, name: 'Gallery', item: 'https://avtecevents.com/gallery' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Gallery', item: 'https://www.avtecindia.com/gallery' },
   ],
 };
 

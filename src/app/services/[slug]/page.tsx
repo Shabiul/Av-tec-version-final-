@@ -44,18 +44,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     '@type': 'Service',
     name: s.title,
     description: s.intro,
-    provider: { '@type': 'LocalBusiness', name: 'AV-TEC', url: 'https://avtecevents.com' },
+    provider: { '@type': 'LocalBusiness', name: 'AV-TEC', url: 'https://www.avtecindia.com' },
     areaServed: 'IN',
-    url: `https://avtecevents.com/services/${slug}`,
+    url: `https://www.avtecindia.com/services/${slug}`,
   };
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://avtecevents.com/services' },
-      { '@type': 'ListItem', position: 3, name: s.title, item: `https://avtecevents.com/services/${slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.avtecindia.com/services' },
+      { '@type': 'ListItem', position: 3, name: s.title, item: `https://www.avtecindia.com/services/${slug}` },
     ],
   };
 

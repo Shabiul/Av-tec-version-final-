@@ -35,7 +35,7 @@ const FAQS = [
   },
   {
     q: 'How can I request a customized quote for my event?',
-    a: 'You can submit an inquiry directly on our website at avtecevents.com/contact, call our team at +91 79757 84962, or email us at ilangovan@avtecindia.com or balaji@avtecindia.com. Our technical team responds with a detailed proposal within one business hour.',
+    a: 'You can submit an inquiry directly on our website at www.avtecindia.com/contact, call our team at +91 79757 84962, or email us at ilangovan@avtecindia.com or balaji@avtecindia.com. Our technical team responds with a detailed proposal within one business hour.',
   },
 ];
 
@@ -56,8 +56,8 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://avtecevents.com' },
-    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://avtecevents.com/faq' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.avtecindia.com/faq' },
   ],
 };
 
