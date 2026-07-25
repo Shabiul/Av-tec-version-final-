@@ -18,11 +18,11 @@ export default function Preloader() {
           clearInterval(interval);
           return 100;
         }
-        // Random increment for realistic loading simulation
-        const diff = Math.floor(Math.random() * 15) + 5;
+        // Increment by 1-2% every tick (~4.5 to 5 seconds total)
+        const diff = Math.random() > 0.4 ? 1 : 2;
         return Math.min(prev + diff, 100);
       });
-    }, 80);
+    }, 45);
 
     return () => {
       clearInterval(interval);
