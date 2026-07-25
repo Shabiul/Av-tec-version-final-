@@ -26,7 +26,7 @@ const DIVISIONS = [
 ];
 
 const DIFFERENTIATORS = [
-  { title: 'Marquee Inventory', desc: 'D&B audiotechnik, Martin Audio, Avid, Allen & Heath, Shure, Sennheiser, Electro-Voice, Oliver System Limited, Teleprompter, Quiz Buzzer, and Clear Communication units — world-class gear for events of any scale.' },
+  { title: 'Marquee Inventory', desc: 'D&b audiotechnik, Martin Audio, Avid, Allen&heath, Shure, Sennheiser, Electro Voice, Oliver system limited, Teleprompter, Quiz buzzer, Clear Communication units' },
   { title: 'Steady Technical Crew', desc: 'Certified engineers and riggers who plan ahead and stay calm under show pressure.' },
   { title: 'Straightforward Advice', desc: 'We recommend the right solution for your event and budget — no overselling.' },
 ];
