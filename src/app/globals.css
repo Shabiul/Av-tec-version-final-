@@ -355,14 +355,19 @@ p { margin-top: 0; line-height: 1.7; }
 
 /* ===== DIVERSIFICATION ===== */
 .diversification {
-  background: var(--panel-light, #0e1e36);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #f1f5f9;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 40px 24px;
 }
-.diversification h2 { color: var(--text, #f0f0f0); margin-bottom: 8px; }
-.diversification p { color: var(--muted, #8b9bb4); max-width: 760px; margin: 0 auto; }
+.diversification .eyebrow,
+.diversification h2,
+.diversification p {
+  color: #000000 !important;
+}
+.diversification h2 { margin-bottom: 8px; }
+.diversification p { max-width: 760px; margin: 0 auto; }
 
 /* ===== RENTAL & SALES FULL-BLEED ===== */
 .fullbleed-section {
