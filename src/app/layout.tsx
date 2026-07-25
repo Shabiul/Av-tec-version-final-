@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import Preloader from "@/components/Preloader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -79,7 +80,7 @@ const organizationJsonLd = {
   description: DESCRIPTION,
   foundingDate: "1992",
   telephone: "+91-79757-84962",
-  email: ["ilangovan@avtecindia.com", "ramesh@avtecindia.com"],
+  email: ["ilangovan@avtecindia.com", "ramesh@avtecindia.com", "balaji@avtecindia.com"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bengaluru",
@@ -103,6 +104,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
+        <Preloader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
