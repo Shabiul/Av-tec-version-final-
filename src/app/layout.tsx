@@ -19,14 +19,13 @@ const playfair = Playfair_Display({
 });
 
 const SITE_URL = "https://www.avtecindia.com";
-const SITE_NAME = "AV-TEC (avtecindia.com)";
 const DESCRIPTION =
-  "AV-TEC (avtecindia.com) - Premier audio visual and event technology solutions since 1992. Sound system rental, stage lighting, LED video walls, conference AV, equipment rental, and technical support across Bengaluru and India.";
+  "AV-TEC provides audio, lighting, video, trussing, and event technical services in Bengaluru, India, since 1992. View services, gallery, and rentals.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "AV-TEC | Audio Visual & Event Technology Bengaluru India | avtecindia.com",
+    default: "AV-TEC | Audio Visual & Event Technology, Bengaluru",
     template: "%s | AV-TEC India",
   },
   description: DESCRIPTION,
@@ -76,14 +75,14 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "AV-TEC India",
-    title: "AV-TEC | Audio Visual & Event Technology Bengaluru India",
+    title: "AV-TEC | Audio Visual & Event Technology, Bengaluru",
     description: DESCRIPTION,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AV-TEC India" }],
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AV-TEC | Audio Visual & Event Technology Bengaluru India",
+    title: "AV-TEC | Audio Visual & Event Technology, Bengaluru",
     description: DESCRIPTION,
     images: ["/og-image.png"],
   },
@@ -107,13 +106,19 @@ const organizationJsonLd = {
   image: `${SITE_URL}/og-image.png`,
   description: DESCRIPTION,
   foundingDate: "1992",
-  telephone: "+91-79757-84962",
+  telephone: "+91 79757 84962",
   email: ["ilangovan@avtecindia.com", "balaji@avtecindia.com"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bengaluru",
     addressRegion: "Karnataka",
     addressCountry: "IN",
+  },
+  hasMap: "https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784",
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 12.9868205,
+    longitude: 77.5990784
   },
   areaServed: "IN",
   aggregateRating: {
@@ -125,6 +130,7 @@ const organizationJsonLd = {
   },
   sameAs: [
     "https://www.avtecindia.com",
+    "https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784",
     "https://github.com/Shabiul/Av-tec-version-final-"
   ],
 };

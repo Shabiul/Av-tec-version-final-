@@ -3,16 +3,16 @@ import GalleryExplorer from '@/components/GalleryExplorer';
 import { GALLERY_IMAGES, GALLERY_VIDEOS } from '@/data/gallery';
 
 export const metadata = {
-  title: 'AV Event & Equipment Gallery | Photos & Production Videos | AV-TEC',
-  description: 'Explore live event photos, stage lighting rigs, D&B audio setups, and P2.5 LED video wall installations delivered by AV-TEC across India.',
+  title: 'Gallery | AV-TEC Event Production Work',
+  description: "Browse photos and videos of AV-TEC's audio, lighting, video, and staging work from past events in Bengaluru and beyond.",
   alternates: {
     canonical: '/gallery',
     languages: { 'en-IN': '/gallery', 'en': '/gallery' },
   },
   openGraph: {
     url: '/gallery',
-    title: 'AV Event & Equipment Gallery | AV-TEC',
-    description: 'Explore live event photos, stage lighting rigs, D&B audio setups, and P2.5 LED video wall installations delivered by AV-TEC across India.',
+    title: 'Gallery | AV-TEC Event Production Work',
+    description: "Browse photos and videos of AV-TEC's audio, lighting, video, and staging work from past events in Bengaluru and beyond.",
   },
 };
 

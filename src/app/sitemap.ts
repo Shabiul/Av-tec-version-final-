@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/rental`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/faq`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/contact`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/terms`, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = SERVICE_LIST.map((s) => ({

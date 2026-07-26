@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import Link from 'next/link';
 import { EVENT_TYPES, todayISO, validateEnquiry } from '@/lib/enquiry';
 
 interface ContactFormProps {
@@ -286,7 +287,7 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
             aria-describedby={errors.agree ? 'err-agree' : undefined}
           />
           <span>
-            I agree to the <a href="/terms">Terms &amp; Conditions</a>
+            I agree to the <Link href="/terms">Terms &amp; Conditions</Link>
           </span>
         </label>
         {errors.agree && (

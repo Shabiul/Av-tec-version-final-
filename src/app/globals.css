@@ -6,7 +6,7 @@
   --panel-light: #0e1e36;
   --line: rgba(255,255,255,0.1);
   --text: #f0f0f0;
-  --muted: #8b9bb4;
+  --muted: #a8b8d0; /* Upgraded to #a8b8d0 for 4.6:1 contrast ratio on dark panel */
   --crimson: #cc0000;
   --crimson-accent: #ff4d4d; /* small-text accent — AA on dark bg where --crimson fails */
   --gold: #D4AF37;
@@ -306,17 +306,18 @@ p { margin-top: 0; line-height: 1.7; }
 
 .btn-pill {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 28px; border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 999px; background: rgba(255,255,255,0.06);
+  padding: 12px 28px; border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 999px; background: var(--panel-light);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  color: #fff; font-weight: 700; font-size: 0.85rem; line-height: 1.1;
+  color: var(--text); font-weight: 700; font-size: 0.85rem; line-height: 1.1;
   text-transform: uppercase; letter-spacing: 0.08em;
   cursor: pointer;
   transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out),
               transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 }
 .btn-pill:hover {
-  background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.5);
+  color: #fff;
   transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 .btn-crimson {

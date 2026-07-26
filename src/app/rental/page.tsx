@@ -2,16 +2,16 @@ import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Event Equipment Rental Bengaluru | Sound, Light & Screen Rental | AV-TEC',
-  description: 'Rent professional D&B sound systems, stage lighting, LED video walls & audio visual gear in Bengaluru and across India. Complete setup with technical crew.',
+  title: 'Equipment Rental | AV-TEC Bengaluru',
+  description: 'Rent sound systems, lighting, LED walls, and event AV equipment from AV-TEC in Bengaluru for concerts, weddings, corporate events, and more.',
   alternates: {
     canonical: '/rental',
     languages: { 'en-IN': '/rental', 'en': '/rental' },
   },
   openGraph: {
     url: '/rental',
-    title: 'Event Equipment Rental Bengaluru | AV-TEC',
-    description: 'Rent professional D&B sound systems, stage lighting, LED video walls & audio visual gear in Bengaluru and across India.',
+    title: 'Equipment Rental | AV-TEC Bengaluru',
+    description: 'Rent sound systems, lighting, LED walls, and event AV equipment from AV-TEC in Bengaluru for concerts, weddings, corporate events, and more.',
   },
 };
 

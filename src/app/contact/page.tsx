@@ -2,16 +2,16 @@ import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Contact AV-TEC | AV Rental & Technical Support Bengaluru',
-  description: 'Get in touch with AV-TEC for event technology, sound systems, LED wall rentals, installations and technical support across Bengaluru and India.',
+  title: 'Contact AV-TEC | Bengaluru Event AV Company',
+  description: 'Get in touch with AV-TEC for audio, lighting, video, and event technical solutions. Based in Bengaluru, Karnataka, India.',
   alternates: {
     canonical: '/contact',
     languages: { 'en-IN': '/contact', 'en': '/contact' },
   },
   openGraph: {
     url: '/contact',
-    title: 'Contact AV-TEC | AV Rental & Technical Support Bengaluru',
-    description: 'Get in touch with AV-TEC for event technology, sound systems, LED wall rentals, installations and technical support across India.',
+    title: 'Contact AV-TEC | Bengaluru Event AV Company',
+    description: 'Get in touch with AV-TEC for audio, lighting, video, and event technical solutions. Based in Bengaluru, Karnataka, India.',
   },
 };
 

@@ -23,6 +23,7 @@ const NAV_LINKS = [
   { label: 'Rental', href: '/rental' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Terms', href: '/terms' },
 ];
 
 const SocialIcon = ({ name }: { name: keyof typeof SOCIAL }) => (
@@ -48,7 +49,15 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-address">
-          <div className="footer-address-line1">Bengaluru, Karnataka, India</div>
+          <div className="footer-address-line1">
+            <a
+              href="https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bengaluru, Karnataka, India
+            </a>
+          </div>
           <div className="footer-address-line2">
             <a href="tel:+917975784962">+91 79757 84962</a>
             <span className="footer-sep">•</span>

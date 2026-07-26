@@ -5,16 +5,16 @@ import { CASE_STUDIES } from '@/data/case-studies';
 import { TESTIMONIALS } from '@/data/testimonials';
 
 export const metadata = {
-  title: 'Event Case Studies & Production Portfolio | AV-TEC India',
-  description: 'Explore featured AV productions, D&B line array concerts, corporate launches, and client reviews from 30+ years of AV-TEC events.',
+  title: 'Our Work | AV-TEC Event Case Studies',
+  description: 'See past events AV-TEC has produced, including concerts, corporate summits, festivals, and private functions.',
   alternates: {
     canonical: '/work',
     languages: { 'en-IN': '/work', 'en': '/work' },
   },
   openGraph: {
     url: '/work',
-    title: 'Event Case Studies & Production Portfolio | AV-TEC India',
-    description: 'Explore featured AV productions, D&B line array concerts, corporate launches, and client reviews from 30+ years of AV-TEC events.',
+    title: 'Our Work | AV-TEC Event Case Studies',
+    description: 'See past events AV-TEC has produced, including concerts, corporate summits, festivals, and private functions.',
   },
 };
 

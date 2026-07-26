@@ -3,16 +3,16 @@ import PageHero from '@/components/PageHero';
 import CountUp from '@/components/CountUp';
 
 export const metadata = {
-  title: 'About AV-TEC | Event Production & AV Rental Bengaluru',
-  description: 'Founded in 1992, AV-TEC delivers world-class sound systems, stage lighting, LED video walls & technical support for 4000+ events across Bengaluru and India.',
+  title: 'About AV-TEC | Event Technology Company Since 1992',
+  description: 'AV-TEC is an audio-visual and event technology company based in Bengaluru, India, operating since 1992. Learn about our background and services.',
   alternates: {
     canonical: '/about',
     languages: { 'en-IN': '/about', 'en': '/about' },
   },
   openGraph: {
     url: '/about',
-    title: 'About AV-TEC | Event Production & AV Rental Bengaluru',
-    description: 'Founded in 1992, AV-TEC delivers world-class sound systems, stage lighting, LED video walls & technical support for 4000+ events across Bengaluru and India.',
+    title: 'About AV-TEC | Event Technology Company Since 1992',
+    description: 'AV-TEC is an audio-visual and event technology company based in Bengaluru, India, operating since 1992. Learn about our background and services.',
   },
 };
 

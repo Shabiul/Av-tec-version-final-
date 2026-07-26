@@ -30,6 +30,24 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, errors }, { status: 400 });
   }
 
+  const web3key = process.env.WEB3FORMS_ACCESS_KEY;
+  if (web3key) {
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: web3key,
+          subject: body.subject ?? 'New AV-TEC Enquiry',
+          from_name: normalized.name,
+          ...normalized,
+        }),
+      });
+    } catch (err) {
+      console.warn('[WEB3FORMS SERVER SUBMIT ERROR]', err);
+    }
+  }
+
   const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
   const isRealWebhook = webhookUrl && !webhookUrl.includes('YOUR_DEPLOYMENT_ID');
 
