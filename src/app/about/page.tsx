@@ -5,7 +5,10 @@ import CountUp from '@/components/CountUp';
 export const metadata = {
   title: 'About AV-TEC | Event Production & AV Rental Bengaluru',
   description: 'Founded in 1992, AV-TEC delivers world-class sound systems, stage lighting, LED video walls & technical support for 4000+ events across Bengaluru and India.',
-  alternates: { canonical: '/about' },
+  alternates: {
+    canonical: '/about',
+    languages: { 'en-IN': '/about', 'en': '/about' },
+  },
   openGraph: {
     url: '/about',
     title: 'About AV-TEC | Event Production & AV Rental Bengaluru',
@@ -112,8 +115,8 @@ export default function AboutPage() {
       {/* ═══ CLOSING CTA ═══ */}
       <section className="section about-cta-section">
         <div className="section-center" style={{ maxWidth: '720px' }}>
-          <h2 className="about-cta-title" style={{ color: '#000000' }}>Let&apos;s Work Together</h2>
-          <p className="about-cta-text" style={{ color: '#000000' }}>
+          <h2 className="about-cta-title">Let&apos;s Work Together</h2>
+          <p className="about-cta-text">
             World-class equipment brought together with local know-how and a personal, dependable approach.
           </p>
           <div className="hero-actions" style={{ marginTop: '32px' }}>

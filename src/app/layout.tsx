@@ -52,7 +52,13 @@ export const metadata: Metadata = {
   creator: "AV-TEC",
   publisher: "AV-TEC",
   robots: { index: true, follow: true },
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-IN": "/",
+      "en": "/",
+    },
+  },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
@@ -85,7 +91,7 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": `${SITE_URL}/#organization`,
   name: "AV-TEC",
   alternateName: [
@@ -110,6 +116,13 @@ const organizationJsonLd = {
     addressCountry: "IN",
   },
   areaServed: "IN",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "8",
+    bestRating: "5",
+    worstRating: "1"
+  },
   sameAs: [
     "https://www.avtecindia.com",
     "https://github.com/Shabiul/Av-tec-version-final-"
@@ -127,6 +140,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <noscript>
+          <style>{`.preloader-overlay { display: none !important; }`}</style>
+        </noscript>
       </head>
       <body>
         <Preloader />

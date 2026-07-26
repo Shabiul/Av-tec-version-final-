@@ -46,6 +46,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -131,10 +132,12 @@ button, input, textarea, select { font: inherit; font-weight: 700; }
    so .main-content must NOT pad the top or it would push the hero down. */
 .main-content {
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .page-wrapper {
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* ===== GLOBAL FOCUS RING ===== */
@@ -1583,30 +1586,38 @@ body.no-scroll { overflow: hidden; }
 }
 
 /* ===== ABOUT CLOSING CTA SECTION ===== */
-.about-cta-section,
-.about-cta-section *,
 .about-cta-section .about-cta-title,
+.about-cta-section h2 {
+  color: var(--gold);
+}
 .about-cta-section .about-cta-text,
-.about-cta-section h2,
-.about-cta-section p,
-.about-cta-section .section-lead,
-[data-theme="light"] .about-cta-section,
-[data-theme="light"] .about-cta-section *,
-[data-theme="light"] .about-cta-section .about-cta-title,
-[data-theme="light"] .about-cta-section .about-cta-text,
-[data-theme="light"] .about-cta-section h2,
-[data-theme="light"] .about-cta-section p,
-[data-theme="light"] .about-cta-section .section-lead {
-  color: #000000 !important;
+.about-cta-section p {
+  color: var(--text);
 }
 
-.btn-pill.btn-dark-text,
+[data-theme="light"] .about-cta-section .about-cta-title,
+[data-theme="light"] .about-cta-section h2 {
+  color: #0f172a !important;
+}
+[data-theme="light"] .about-cta-section .about-cta-text,
+[data-theme="light"] .about-cta-section p {
+  color: #475569 !important;
+}
+
+.btn-pill.btn-dark-text {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+.btn-pill.btn-dark-text:hover {
+  background: #ffffff;
+  color: #000000;
+}
 [data-theme="light"] .btn-pill.btn-dark-text {
-  color: #000000 !important;
+  color: #0f172a !important;
   border-color: rgba(0, 0, 0, 0.4) !important;
   background: rgba(0, 0, 0, 0.05) !important;
 }
-.btn-pill.btn-dark-text:hover,
 [data-theme="light"] .btn-pill.btn-dark-text:hover {
   background: #000000 !important;
   color: #ffffff !important;
@@ -1627,7 +1638,7 @@ body.no-scroll { overflow: hidden; }
 [data-theme="light"] .contact-form option,
 [data-theme="light"] .rental-form-section,
 [data-theme="light"] .rental-form-section * {
-  color: #000000 !important;
+  color: #0f172a !important;
 }
 
 [data-theme="light"] .contact-form input::placeholder,

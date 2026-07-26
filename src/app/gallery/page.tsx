@@ -5,7 +5,10 @@ import { GALLERY_IMAGES, GALLERY_VIDEOS } from '@/data/gallery';
 export const metadata = {
   title: 'AV Event & Equipment Gallery | Photos & Production Videos | AV-TEC',
   description: 'Explore live event photos, stage lighting rigs, D&B audio setups, and P2.5 LED video wall installations delivered by AV-TEC across India.',
-  alternates: { canonical: '/gallery' },
+  alternates: {
+    canonical: '/gallery',
+    languages: { 'en-IN': '/gallery', 'en': '/gallery' },
+  },
   openGraph: {
     url: '/gallery',
     title: 'AV Event & Equipment Gallery | AV-TEC',

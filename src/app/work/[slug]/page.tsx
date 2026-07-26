@@ -16,7 +16,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: c.title,
     description,
-    alternates: { canonical: `/work/${slug}` },
+    alternates: {
+      canonical: `/work/${slug}`,
+      languages: { 'en-IN': `/work/${slug}`, 'en': `/work/${slug}` },
+    },
     openGraph: { url: `/work/${slug}`, title: `${c.title} | AV-TEC`, description, images: c.heroImage ? [c.heroImage] : undefined },
   };
 }

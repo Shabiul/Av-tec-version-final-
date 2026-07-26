@@ -51,7 +51,7 @@ export default function Home() {
       {/* ═══ ABOUT TEASER ═══ */}
       <section className="section deep-section">
         <div className="section-bg" aria-hidden="true">
-          <video autoPlay muted loop playsInline preload="metadata">
+          <video autoPlay muted loop playsInline preload="metadata" poster="/assets/images/gallery/foh-control-position.jpg">
             <source src="/assets/videos/process/process-video.mp4" type="video/mp4" />
           </video>
         </div>

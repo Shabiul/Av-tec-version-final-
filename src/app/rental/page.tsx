@@ -4,7 +4,10 @@ import ContactForm from '@/components/ContactForm';
 export const metadata = {
   title: 'Event Equipment Rental Bengaluru | Sound, Light & Screen Rental | AV-TEC',
   description: 'Rent professional D&B sound systems, stage lighting, LED video walls & audio visual gear in Bengaluru and across India. Complete setup with technical crew.',
-  alternates: { canonical: '/rental' },
+  alternates: {
+    canonical: '/rental',
+    languages: { 'en-IN': '/rental', 'en': '/rental' },
+  },
   openGraph: {
     url: '/rental',
     title: 'Event Equipment Rental Bengaluru | AV-TEC',
@@ -73,8 +76,8 @@ export default function RentalPage() {
       <section className="section rental-form-section">
         <div className="contact-inner">
           <span className="eyebrow" style={{ color: 'var(--orange)' }}>Rental Inquiry</span>
-          <h2 style={{ color: '#000000' }}>Request a Quote</h2>
-          <p className="contact-subtitle" style={{ color: '#000000' }}>Share your event details and equipment needs — we&apos;ll get back with a tailored quote.</p>
+          <h2>Request a Quote</h2>
+          <p className="contact-subtitle">Share your event details and equipment needs — we&apos;ll get back with a tailored quote.</p>
           <ContactForm subject="New AV-TEC Rental Inquiry" />
         </div>
       </section>

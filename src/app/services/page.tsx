@@ -18,7 +18,10 @@ const DIVISIONS = [
 export const metadata = {
   title: 'AV Equipment Rental & Event Production Services | AV-TEC',
   description: 'Full range of audio visual services: sound reinforcement, stage lighting, LED video walls, stage trussing, installations, and technical consultancy in India.',
-  alternates: { canonical: '/services' },
+  alternates: {
+    canonical: '/services',
+    languages: { 'en-IN': '/services', 'en': '/services' },
+  },
   openGraph: {
     url: '/services',
     title: 'AV Equipment Rental & Event Production Services | AV-TEC',

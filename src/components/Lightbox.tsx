@@ -34,6 +34,7 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
   // centered modal instead of dropping into flow at the bottom of the page.
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

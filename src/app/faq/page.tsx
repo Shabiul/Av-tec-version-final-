@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Frequently Asked Questions (FAQ) | AV-TEC Rental & Services',
   description: 'Answers to common questions about AV-TEC event technology rentals, sound systems, LED walls, stage lighting, pricing, and pan-India coverage.',
-  alternates: { canonical: '/faq' },
+  alternates: {
+    canonical: '/faq',
+    languages: { 'en-IN': '/faq', 'en': '/faq' },
+  },
   openGraph: {
     url: '/faq',
     title: 'Frequently Asked Questions | AV-TEC',
