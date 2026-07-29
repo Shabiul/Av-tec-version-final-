@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { SERVICE_LIST } from '@/data/services';
 import { CASE_STUDIES } from '@/data/case-studies';
 
-const SITE_URL = 'https://avtecevents.com';
+const SITE_URL = 'https://www.avtecindia.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -12,7 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/gallery`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${SITE_URL}/work`, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${SITE_URL}/rental`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/faq`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/contact`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/terms`, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = SERVICE_LIST.map((s) => ({

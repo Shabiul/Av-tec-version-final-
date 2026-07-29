@@ -7,15 +7,15 @@ import { GALLERY_IMAGES } from '@/data/gallery';
 import { TESTIMONIALS } from '@/data/testimonials';
 import HeroVideo from '@/components/HeroVideo';
 import CountUp from '@/components/CountUp';
+import TestimonialsSlider from '@/components/TestimonialsSlider';
 
 const STATS = [
   { num: '30+', label: 'Years' },
-  { num: '2000+', label: 'Events Delivered' },
+  { num: '4000+', label: 'Events Delivered' },
   { num: '40+', label: 'Cities Served' },
 ];
 
 const FEATURED = GALLERY_IMAGES.slice(0, 6);
-const t = TESTIMONIALS[0];
 
 export default function Home() {
   return (
@@ -51,7 +51,7 @@ export default function Home() {
       {/* ═══ ABOUT TEASER ═══ */}
       <section className="section deep-section">
         <div className="section-bg" aria-hidden="true">
-          <video autoPlay muted loop playsInline preload="metadata">
+          <video autoPlay muted loop playsInline preload="metadata" poster="/assets/images/gallery/foh-control-position.jpg">
             <source src="/assets/videos/process/process-video.mp4" type="video/mp4" />
           </video>
         </div>
@@ -91,7 +91,7 @@ export default function Home() {
           ))}
         </div>
         <div style={{ textAlign: 'center', marginTop: '32px' }}>
-          <Link href="/services" className="btn-pill">All Services</Link>
+          <Link href="/services" className="btn-pill btn-all-services">All Services</Link>
         </div>
       </section>
 
@@ -116,18 +116,8 @@ export default function Home() {
 
       {/* ═══ TESTIMONIAL HIGHLIGHT ═══ */}
       <section className="section testimonials-section">
-        <div className="section-bg"><img src="/assets/images/gallery/festival-night-show.jpg" alt="" aria-hidden="true" loading="lazy" /></div>
-        <div className="testimonial-content">
-          <span className="eyebrow">Testimonials</span>
-          <h2>What Our Clients Say</h2>
-          <p className="testimonial-quote">&ldquo;{t.quote}&rdquo;</p>
-          <div className="testimonial-avatar">{t.initials}</div>
-          <p className="testimonial-name">{t.name}</p>
-          <p className="testimonial-role">{t.role}</p>
-          <div style={{ marginTop: '28px' }}>
-            <Link href="/work" className="btn-pill">See Proof of Work</Link>
-          </div>
-        </div>
+        <div className="section-bg"><img src="/assets/images/gallery/festival-night-show.jpg" alt="AV-TEC event stage" aria-hidden="true" loading="lazy" /></div>
+        <TestimonialsSlider />
       </section>
 
       {/* ═══ CTA BAND ═══ */}

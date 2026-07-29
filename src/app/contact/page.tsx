@@ -2,15 +2,35 @@ import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Contact',
-  description: 'Get in touch with AV-TEC for event technology, equipment rental, installations and technical support across India.',
-  alternates: { canonical: '/contact' },
-  openGraph: { url: '/contact', title: 'Contact | AV-TEC', description: 'Get in touch with AV-TEC for event technology, equipment rental, installations and technical support across India.' },
+  title: 'Contact AV-TEC | Bengaluru Event AV Company',
+  description: 'Get in touch with AV-TEC for audio, lighting, video, and event technical solutions. Based in Bengaluru, Karnataka, India.',
+  alternates: {
+    canonical: '/contact',
+    languages: { 'en-IN': '/contact', 'en': '/contact' },
+  },
+  openGraph: {
+    url: '/contact',
+    title: 'Contact AV-TEC | Bengaluru Event AV Company',
+    description: 'Get in touch with AV-TEC for audio, lighting, video, and event technical solutions. Based in Bengaluru, Karnataka, India.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.avtecindia.com/contact' },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow="Get In Touch"
         title="Let's Plan Your Event"
@@ -18,18 +38,25 @@ export default function ContactPage() {
         bg="/assets/images/gallery/festival-night-show.jpg"
       />
       <section className="section">
+        <div className="section-center" style={{ maxWidth: '860px', marginBottom: '32px' }}>
+          <span className="eyebrow">Instant Quote Enquiry</span>
+          <h2 className="heading-crimson">Request a Quote</h2>
+        </div>
         <div className="contact-layout">
           <div className="contact-inner" style={{ margin: 0 }}>
-            <ContactForm subject="New AV-TEC Enquiry" />
+            <ContactForm subject="New AV-TEC Quote Enquiry" />
           </div>
           <div className="contact-info">
             <div className="contact-info-card">
               <h4>Phone</h4>
-              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+              <p><a href="tel:+917975784962">+91 79757 84962</a></p>
             </div>
             <div className="contact-info-card">
               <h4>Email</h4>
-              <p><a href="mailto:hello@av-tec.in">hello@av-tec.in</a></p>
+              <p style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <a href="mailto:ilangovan@avtecindia.com">ilangovan@avtecindia.com</a>
+                <a href="mailto:balaji@avtecindia.com">balaji@avtecindia.com</a>
+              </p>
             </div>
             <div className="contact-info-card">
               <h4>Address</h4>

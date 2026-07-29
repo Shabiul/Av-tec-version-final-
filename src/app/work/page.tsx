@@ -1,24 +1,43 @@
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import CountUp from '@/components/CountUp';
+import TestimonialsSlider from '@/components/TestimonialsSlider';
 import { CASE_STUDIES } from '@/data/case-studies';
-import { TESTIMONIALS } from '@/data/testimonials';
 
 export const metadata = {
-  title: 'Our Work',
-  description: 'Proof of work — featured productions, marquee equipment, and client reviews from 30+ years of AV-TEC events.',
-  alternates: { canonical: '/work' },
-  openGraph: { url: '/work', title: 'Our Work | AV-TEC', description: 'Proof of work — featured productions, marquee equipment, and client reviews from 30+ years of AV-TEC events.' },
+  title: 'Our Work | AV-TEC Event Case Studies',
+  description: 'See past events AV-TEC has produced, including concerts, corporate summits, festivals, and private functions.',
+  alternates: {
+    canonical: '/work',
+    languages: { 'en-IN': '/work', 'en': '/work' },
+  },
+  openGraph: {
+    url: '/work',
+    title: 'Our Work | AV-TEC Event Case Studies',
+    description: 'See past events AV-TEC has produced, including concerts, corporate summits, festivals, and private functions.',
+  },
 };
 
 const STATS = [
   { num: '30+', label: 'Years' },
-  { num: '2000+', label: 'Events' },
+  { num: '4000+', label: 'Events' },
   { num: '40+', label: 'Cities' },
   { num: '50k', label: 'Peak Audience' },
 ];
 
-const MARQUEE = ['D&B audiotechnik', 'DiGiCo', 'Robe', 'grandMA3', 'Prolyte', 'Blackmagic', 'Shure', 'Disguise'];
+const MARQUEE = [
+  'D&B audiotechnik',
+  'Martin Audio',
+  'Avid',
+  'Allen & Heath',
+  'Shure',
+  'Sennheiser',
+  'Electro-Voice',
+  'Oliver System Limited',
+  'Teleprompter',
+  'Quiz Buzzer',
+  'Clear Comms Units',
+];
 
 function Stars({ n = 5 }: { n?: number }) {
   return (
@@ -30,9 +49,22 @@ function Stars({ n = 5 }: { n?: number }) {
   );
 }
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://www.avtecindia.com/work' },
+  ],
+};
+
 export default function WorkPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow="Proof of Work"
         title="Our Work"
@@ -72,27 +104,10 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* ═══ CLIENT REVIEWS ═══ */}
-      <section className="section">
-        <div className="section-center">
-          <h2 className="heading-crimson">Client Reviews</h2>
-        </div>
-        <div className="reviews-grid">
-          {TESTIMONIALS.map((t) => (
-            <div className="review-card" key={t.name}>
-              <Stars n={t.rating ?? 5} />
-              <p className="review-quote">&ldquo;{t.quote}&rdquo;</p>
-              <div className="review-meta">
-                <div className="review-avatar">{t.initials}</div>
-                <div>
-                  <p className="review-name">{t.name}</p>
-                  <p className="review-role">{t.role}</p>
-                  {t.eventType && <p className="review-event">{t.eventType}</p>}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* ═══ CLIENT REVIEWS / TESTIMONIALS ═══ */}
+      <section className="section testimonials-section">
+        <div className="section-bg"><img src="/assets/images/gallery/concert-lighting-rig.jpg" alt="AV-TEC event stage" aria-hidden="true" loading="lazy" /></div>
+        <TestimonialsSlider ctaLink="/contact" ctaText="GET A QUOTE" />
       </section>
 
       {/* ═══ CTA ═══ */}

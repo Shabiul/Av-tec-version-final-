@@ -8,16 +8,29 @@ export function generateStaticParams() {
   return SERVICE_LIST.map((s) => ({ slug: s.slug }));
 }
 
+const SEO_TITLES: Record<string, string> = {
+  audio: 'Sound System Rental & Line Array Audio Systems | AV-TEC Bengaluru',
+  lighting: 'Stage Lighting Rental & Pixel Mapping Solutions | AV-TEC',
+  video: 'LED Video Wall Rental & Projection Mapping India | AV-TEC',
+  trussing: 'Stage Trussing & Rigging Equipment Rental | AV-TEC',
+  consultancy: 'Audio Visual Technical Consultancy Services | AV-TEC',
+  installations: 'Permanent Audio Visual System Installations | AV-TEC',
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const s = SERVICES[slug];
   if (!s) return {};
   const description = s.intro.slice(0, 160);
+  const title = SEO_TITLES[slug] || `${s.title} Rental & Services | AV-TEC`;
   return {
-    title: s.title,
+    title,
     description,
-    alternates: { canonical: `/services/${slug}` },
-    openGraph: { url: `/services/${slug}`, title: `${s.title} | AV-TEC`, description },
+    alternates: {
+      canonical: `/services/${slug}`,
+      languages: { 'en-IN': `/services/${slug}`, 'en': `/services/${slug}` },
+    },
+    openGraph: { url: `/services/${slug}`, title: `${title} | AV-TEC`, description },
   };
 }
 
@@ -34,9 +47,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     '@type': 'Service',
     name: s.title,
     description: s.intro,
-    provider: { '@type': 'LocalBusiness', name: 'AV-TEC', url: 'https://avtecevents.com' },
+    provider: { '@type': 'LocalBusiness', name: 'AV-TEC', url: 'https://www.avtecindia.com' },
     areaServed: 'IN',
-    url: `https://avtecevents.com/services/${slug}`,
+    url: `https://www.avtecindia.com/services/${slug}`,
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.avtecindia.com/services' },
+      { '@type': 'ListItem', position: 3, name: s.title, item: `https://www.avtecindia.com/services/${slug}` },
+    ],
   };
 
   return (
@@ -44,6 +67,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <PageHero eyebrow="Our Services" title={s.title} bg={s.hero} />
 
@@ -80,10 +107,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section">
         <div className="section-center">
           <h2 className="heading-crimson">Equipment Inventory</h2>
+          <div className="trusted-strip" style={{ marginTop: '28px' }}>
+            {s.equipment.slice(0, 8).map((e) => (
+              <span key={e}>{e}</span>
+            ))}
+          </div>
         </div>
-        <ul className="equipment-list">
-          {s.equipment.map((e) => <li key={e}>{e}</li>)}
-        </ul>
       </section>
 
       {/* ═══ REVIEWS ═══ */}

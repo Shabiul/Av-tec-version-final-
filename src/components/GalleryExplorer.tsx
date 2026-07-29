@@ -49,6 +49,7 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
   // Detect reduced motion after mount to avoid hydration mismatch
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setReduce(mq.matches);
     const handler = (e: MediaQueryListEvent) => setReduce(e.matches);
     mq.addEventListener('change', handler);
@@ -56,6 +57,7 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -162,7 +164,7 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
                 onClick={() => setSelectedSrc(item.src)}
                 aria-label={`${item.kind === 'video' ? 'Play' : 'View'} ${item.title}`}
               >
-                <img src={item.thumb} alt={item.title} loading="lazy" />
+                <img src={item.thumb} alt={item.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 {item.kind === 'video' && (
                   <span className="play-badge">
                     <span>

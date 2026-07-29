@@ -2,11 +2,6 @@ import Link from 'next/link';
 
 // Social profile URLs — replace '#' with the client's real profile links.
 const SOCIAL: Record<string, { label: string; url: string; path: string }> = {
-  linkedin: {
-    label: 'AV-TEC on LinkedIn',
-    url: '#',
-    path: 'M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM20 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0014 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z',
-  },
   instagram: {
     label: 'AV-TEC on Instagram',
     url: '#',
@@ -21,7 +16,9 @@ const NAV_LINKS = [
   { label: 'Gallery', href: '/gallery' },
   { label: 'Work', href: '/work' },
   { label: 'Rental', href: '/rental' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Terms', href: '/terms' },
 ];
 
 const SocialIcon = ({ name }: { name: keyof typeof SOCIAL }) => (
@@ -41,16 +38,44 @@ export default function Footer() {
         <div className="footer-social-row">
           <span className="footer-social-label">Follow Us</span>
           <div className="footer-social">
-            {(['linkedin', 'instagram'] as const).map((s) => (
+            {(['instagram'] as const).map((s) => (
               <a key={s} href={SOCIAL[s].url} aria-label={SOCIAL[s].label} target="_blank" rel="noopener noreferrer"><SocialIcon name={s} /></a>
             ))}
           </div>
         </div>
         <div className="footer-address">
-          Bengaluru, Karnataka, India<br />
-          <a href="tel:+919876543210">+91 98765 43210</a> &nbsp;|&nbsp; <a href="mailto:hello@av-tec.in">hello@av-tec.in</a>
+          <div className="footer-address-line1">
+            <a
+              href="https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bengaluru, Karnataka, India
+            </a>
+          </div>
+          <div className="footer-address-line2">
+            <a href="tel:+917975784962">+91 79757 84962</a>
+            <span className="footer-sep">•</span>
+            <a href="mailto:ilangovan@avtecindia.com">ilangovan@avtecindia.com</a>
+            <span className="footer-sep">•</span>
+            <a href="mailto:balaji@avtecindia.com">balaji@avtecindia.com</a>
+          </div>
         </div>
-        <p className="footer-copy">&copy; {new Date().getFullYear()} AV-TEC. All rights reserved.</p>
+        <p className="footer-copy">
+          &copy; {new Date().getFullYear()} AV-TEC. All rights reserved.
+          <span className="footer-sep" style={{ margin: '0 8px' }}>•</span>
+          <span>
+            Designed &amp; Developed by{' '}
+            <a
+              href="https://naazailabs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-credit-link"
+            >
+              naazailabs.com
+            </a>
+          </span>
+        </p>
       </div>
     </footer>
   );

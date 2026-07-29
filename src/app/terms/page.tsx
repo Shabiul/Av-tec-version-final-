@@ -1,15 +1,31 @@
 import PageHero from '@/components/PageHero';
 
 export const metadata = {
-  title: 'Terms & Conditions',
+  title: 'Terms & Conditions | AV-TEC',
   description: 'Terms and conditions for AV-TEC equipment rental, event production, and enquiry services.',
-  alternates: { canonical: '/terms' },
+  alternates: {
+    canonical: '/terms',
+    languages: { 'en-IN': '/terms', 'en': '/terms' },
+  },
   robots: { index: false, follow: true },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Terms', item: 'https://www.avtecindia.com/terms' },
+  ],
 };
 
 export default function TermsPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero eyebrow="Legal" title="Terms & Conditions" />
       <section className="section">
         <div className="section-center" style={{ textAlign: 'left', maxWidth: 760 }}>
@@ -40,7 +56,7 @@ export default function TermsPage() {
           <h2 className="heading-crimson">Contact</h2>
           <p>
             For questions about these terms, contact us at{' '}
-            <a href="mailto:hello@av-tec.in">hello@av-tec.in</a>.
+            <a href="mailto:ilangovan@avtecindia.com">ilangovan@avtecindia.com</a>.
           </p>
         </div>
       </section>

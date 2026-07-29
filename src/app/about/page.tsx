@@ -3,15 +3,22 @@ import PageHero from '@/components/PageHero';
 import CountUp from '@/components/CountUp';
 
 export const metadata = {
-  title: 'About',
-  description: 'AV-TEC — Audio Visual & Event Technology since 1992. Based in Bengaluru, serving events across the country.',
-  alternates: { canonical: '/about' },
-  openGraph: { url: '/about', title: 'About | AV-TEC', description: 'AV-TEC — Audio Visual & Event Technology since 1992. Based in Bengaluru, serving events across the country.' },
+  title: 'About AV-TEC | Event Technology Company Since 1992',
+  description: 'AV-TEC is an audio-visual and event technology company based in Bengaluru, India, operating since 1992. Learn about our background and services.',
+  alternates: {
+    canonical: '/about',
+    languages: { 'en-IN': '/about', 'en': '/about' },
+  },
+  openGraph: {
+    url: '/about',
+    title: 'About AV-TEC | Event Technology Company Since 1992',
+    description: 'AV-TEC is an audio-visual and event technology company based in Bengaluru, India, operating since 1992. Learn about our background and services.',
+  },
 };
 
 const STATS = [
   { num: '30+', label: 'Years' },
-  { num: '2000+', label: 'Events Delivered' },
+  { num: '4000+', label: 'Events Delivered' },
   { num: '40+', label: 'Cities Served' },
   { num: '24/7', label: 'On-Site Support' },
 ];
@@ -22,14 +29,27 @@ const DIVISIONS = [
 ];
 
 const DIFFERENTIATORS = [
-  { title: 'Marquee Inventory', desc: 'D&B audiotechnik, DiGiCo, Robe, grandMA3 and more — the same gear used at the world’s biggest shows.' },
+  { title: 'Marquee Inventory', desc: 'D&b audiotechnik, Martin Audio, Avid, Allen&heath, Shure, Sennheiser, Electro Voice, Oliver system limited, Teleprompter, Quiz buzzer, Clear Comms units' },
   { title: 'Steady Technical Crew', desc: 'Certified engineers and riggers who plan ahead and stay calm under show pressure.' },
   { title: 'Straightforward Advice', desc: 'We recommend the right solution for your event and budget — no overselling.' },
 ];
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.avtecindia.com/about' },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow="About Us"
         title="Audio Visual & Event Technology Since 1992"
@@ -93,15 +113,15 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ CLOSING CTA ═══ */}
-      <section className="section deep-section">
+      <section className="section about-cta-section">
         <div className="section-center" style={{ maxWidth: '720px' }}>
-          <h2 className="heading-crimson">Let&apos;s Work Together</h2>
-          <p className="section-lead">
+          <h2 className="about-cta-title">Let&apos;s Work Together</h2>
+          <p className="about-cta-text">
             World-class equipment brought together with local know-how and a personal, dependable approach.
           </p>
           <div className="hero-actions" style={{ marginTop: '32px' }}>
             <Link href="/services" className="btn-pill btn-crimson">Our Services</Link>
-            <Link href="/contact" className="btn-pill">Get in Touch</Link>
+            <Link href="/contact" className="btn-pill btn-dark-text">Get in Touch</Link>
           </div>
         </div>
       </section>

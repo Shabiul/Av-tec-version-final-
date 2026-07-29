@@ -2,10 +2,17 @@ import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Rental Inquiry',
-  description: 'Rent professional sound, lighting, video and LED equipment — with delivery, setup and technical crew for events across India.',
-  alternates: { canonical: '/rental' },
-  openGraph: { url: '/rental', title: 'Rental Inquiry | AV-TEC', description: 'Rent professional sound, lighting, video and LED equipment — with delivery, setup and technical crew for events across India.' },
+  title: 'Equipment Rental | AV-TEC Bengaluru',
+  description: 'Rent sound systems, lighting, LED walls, and event AV equipment from AV-TEC in Bengaluru for concerts, weddings, corporate events, and more.',
+  alternates: {
+    canonical: '/rental',
+    languages: { 'en-IN': '/rental', 'en': '/rental' },
+  },
+  openGraph: {
+    url: '/rental',
+    title: 'Equipment Rental | AV-TEC Bengaluru',
+    description: 'Rent sound systems, lighting, LED walls, and event AV equipment from AV-TEC in Bengaluru for concerts, weddings, corporate events, and more.',
+  },
 };
 
 const EVENT_TYPES = ['Concerts', 'Weddings', 'Corporate', 'Festivals', 'Exhibitions', 'Medical Conferences'];
@@ -16,9 +23,22 @@ const INCLUDES = [
   { title: 'Crew & Delivery', desc: 'Transport, rigging, setup, operation and strike — handled by our team.' },
 ];
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Rental', item: 'https://www.avtecindia.com/rental' },
+  ],
+};
+
 export default function RentalPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 <PageHero
         eyebrow="Rental"
         title="Equipment Rental & Event Production"
@@ -26,6 +46,16 @@ export default function RentalPage() {
         bg="/assets/images/gallery/main-stage-line-array.jpg"
         bgVideo="/assets/videos/hero/hero-main.mp4"
       />
+
+      {/* ═══ INQUIRY FORM ═══ */}
+      <section className="section rental-form-section">
+        <div className="contact-inner">
+          <span className="eyebrow" style={{ color: 'var(--orange)' }}>Rental Inquiry</span>
+          <h2>Request a Quote</h2>
+          <p className="contact-subtitle">Share your event details and equipment needs — we&apos;ll get back with a tailored quote.</p>
+          <ContactForm subject="New AV-TEC Rental Inquiry" />
+        </div>
+      </section>
 
       {/* ═══ EVENT TYPES ═══ */}
       <section className="section">
@@ -49,16 +79,6 @@ export default function RentalPage() {
               <p>{i.desc}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ═══ INQUIRY FORM ═══ */}
-      <section className="section deep-section">
-        <div className="contact-inner">
-          <span className="eyebrow" style={{ color: 'var(--orange)' }}>Rental Inquiry</span>
-          <h2>Request a Quote</h2>
-          <p className="contact-subtitle">Share your event details and equipment needs — we&apos;ll get back with a tailored quote.</p>
-          <ContactForm subject="New AV-TEC Rental Inquiry" />
         </div>
       </section>
     </div>

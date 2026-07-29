@@ -16,15 +16,35 @@ const DIVISIONS = [
 ];
 
 export const metadata = {
-  title: 'Services',
-  description: 'Audio, lighting, video & LED, trussing, installations, and technical consultancy for events across India.',
-  alternates: { canonical: '/services' },
-  openGraph: { url: '/services', title: 'Services | AV-TEC', description: 'Audio, lighting, video & LED, trussing, installations, and technical consultancy for events across India.' },
+  title: 'AV Services | Sound, Lighting, Video — AV-TEC Bengaluru',
+  description: 'AV-TEC offers audio, lighting, video, trussing, consultancy, and installation services for events in Bengaluru. Explore each service in detail.',
+  alternates: {
+    canonical: '/services',
+    languages: { 'en-IN': '/services', 'en': '/services' },
+  },
+  openGraph: {
+    url: '/services',
+    title: 'AV Services | Sound, Lighting, Video — AV-TEC Bengaluru',
+    description: 'AV-TEC offers audio, lighting, video, trussing, consultancy, and installation services for events in Bengaluru. Explore each service in detail.',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.avtecindia.com/services' },
+  ],
 };
 
 export default function ServicesPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow="Our Services"
         title="Practical AV Support for Real Events"

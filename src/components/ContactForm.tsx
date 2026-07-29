@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import Link from 'next/link';
 import { EVENT_TYPES, todayISO, validateEnquiry } from '@/lib/enquiry';
 
 interface ContactFormProps {
@@ -33,6 +34,7 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
       name: String(data.get('name') ?? ''),
       company: String(data.get('company') ?? ''),
       email: String(data.get('email') ?? ''),
+      setup_date: String(data.get('setup_date') ?? ''),
       date: String(data.get('date') ?? ''),
       event_type: String(data.get('event_type') ?? ''),
       location: String(data.get('location') ?? ''),
@@ -115,7 +117,9 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
       <input type="hidden" name="_subject" value={subject} />
       <div className="form-row">
         <label htmlFor="cf-name">
-          Name <span className="req" aria-hidden="true">*</span>
+          <span className="label-title">
+            Name <span className="req" aria-hidden="true">*</span>
+          </span>
           <input
             id="cf-name"
             name="name"
@@ -132,7 +136,7 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
           )}
         </label>
         <label htmlFor="cf-company">
-          Company / Organization
+          <span className="label-title">Company / Organization</span>
           <input
             id="cf-company"
             name="company"
@@ -150,7 +154,9 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
       </div>
       <div className="form-row">
         <label htmlFor="cf-email">
-          Email <span className="req" aria-hidden="true">*</span>
+          <span className="label-title">
+            Email <span className="req" aria-hidden="true">*</span>
+          </span>
           <input
             id="cf-email"
             name="email"
@@ -167,13 +173,66 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
             </span>
           )}
         </label>
+        <label htmlFor="cf-phone">
+          <span className="label-title">
+            Phone <span className="req" aria-hidden="true">*</span>
+          </span>
+          <input
+            id="cf-phone"
+            name="phone"
+            type="tel"
+            inputMode="numeric"
+            placeholder="+91"
+            autoComplete="tel"
+            aria-required="true"
+            aria-invalid={!!errors.phone}
+            aria-describedby={errors.phone ? 'err-phone' : undefined}
+          />
+          {errors.phone && (
+            <span className="field-error" id="err-phone" role="alert">
+              {errors.phone}
+            </span>
+          )}
+        </label>
+      </div>
+      <div className="form-row">
+        <label htmlFor="cf-setup-date">
+          <span className="label-title">Setup Date</span>
+          <input
+            id="cf-setup-date"
+            name="setup_date"
+            type="date"
+            min={minDate}
+            onClick={(e) => {
+              try { e.currentTarget.showPicker(); } catch {}
+            }}
+            onFocus={(e) => {
+              try { e.currentTarget.showPicker(); } catch {}
+            }}
+            aria-invalid={!!errors.setup_date}
+            aria-describedby={errors.setup_date ? 'err-setup-date' : undefined}
+          />
+          {errors.setup_date && (
+            <span className="field-error" id="err-setup-date" role="alert">
+              {errors.setup_date}
+            </span>
+          )}
+        </label>
         <label htmlFor="cf-date">
-          Event Date <span className="req" aria-hidden="true">*</span>
+          <span className="label-title">
+            Event Date <span className="req" aria-hidden="true">*</span>
+          </span>
           <input
             id="cf-date"
             name="date"
             type="date"
             min={minDate}
+            onClick={(e) => {
+              try { e.currentTarget.showPicker(); } catch {}
+            }}
+            onFocus={(e) => {
+              try { e.currentTarget.showPicker(); } catch {}
+            }}
             aria-required="true"
             aria-invalid={!!errors.date}
             aria-describedby={errors.date ? 'err-date' : undefined}
@@ -187,7 +246,9 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
       </div>
       <div className="form-row">
         <label htmlFor="cf-event-type">
-          Event Type <span className="req" aria-hidden="true">*</span>
+          <span className="label-title">
+            Event Type <span className="req" aria-hidden="true">*</span>
+          </span>
           <select
             id="cf-event-type"
             name="event_type"
@@ -212,7 +273,9 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
           )}
         </label>
         <label htmlFor="cf-location">
-          Event Location <span className="req" aria-hidden="true">*</span>
+          <span className="label-title">
+            Event Location <span className="req" aria-hidden="true">*</span>
+          </span>
           <input
             id="cf-location"
             name="location"
@@ -230,29 +293,10 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
         </label>
       </div>
       <div className="form-row full">
-        <label htmlFor="cf-phone">
-          Phone <span className="req" aria-hidden="true">*</span>
-          <input
-            id="cf-phone"
-            name="phone"
-            type="tel"
-            inputMode="numeric"
-            placeholder="+91"
-            autoComplete="tel"
-            aria-required="true"
-            aria-invalid={!!errors.phone}
-            aria-describedby={errors.phone ? 'err-phone' : undefined}
-          />
-          {errors.phone && (
-            <span className="field-error" id="err-phone" role="alert">
-              {errors.phone}
-            </span>
-          )}
-        </label>
-      </div>
-      <div className="form-row full">
         <label htmlFor="cf-message">
-          Message <span className="req" aria-hidden="true">*</span>
+          <span className="label-title">
+            Message <span className="req" aria-hidden="true">*</span>
+          </span>
           <textarea
             id="cf-message"
             name="message"
@@ -280,7 +324,7 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
             aria-describedby={errors.agree ? 'err-agree' : undefined}
           />
           <span>
-            I agree to the <a href="/terms">Terms &amp; Conditions</a>
+            I agree to the <Link href="/terms">Terms &amp; Conditions</Link>
           </span>
         </label>
         {errors.agree && (

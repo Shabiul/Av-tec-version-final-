@@ -16,7 +16,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: c.title,
     description,
-    alternates: { canonical: `/work/${slug}` },
+    alternates: {
+      canonical: `/work/${slug}`,
+      languages: { 'en-IN': `/work/${slug}`, 'en': `/work/${slug}` },
+    },
     openGraph: { url: `/work/${slug}`, title: `${c.title} | AV-TEC`, description, images: c.heroImage ? [c.heroImage] : undefined },
   };
 }
@@ -33,8 +36,22 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
     equipment: '',
   }));
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+      { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://www.avtecindia.com/work' },
+      { '@type': 'ListItem', position: 3, name: c.title, item: `https://www.avtecindia.com/work/${slug}` },
+    ],
+  };
+
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero eyebrow={`${c.city} · ${c.date}`} title={c.title} subtitle={c.services.join(' · ')} bg={c.heroImage} />
 
       {/* ═══ META ═══ */}
@@ -76,7 +93,7 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
 
       {/* ═══ TESTIMONIAL ═══ */}
       {c.testimonial && (
-        <section className="section deep-section">
+        <section className="section client-feedback-section">
           <div className="testimonial-content">
             <span className="eyebrow">Client Feedback</span>
             <p className="testimonial-quote">&ldquo;{c.testimonial.quote}&rdquo;</p>

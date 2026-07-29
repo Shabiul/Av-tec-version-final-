@@ -3,15 +3,53 @@ import GalleryExplorer from '@/components/GalleryExplorer';
 import { GALLERY_IMAGES, GALLERY_VIDEOS } from '@/data/gallery';
 
 export const metadata = {
-  title: 'Gallery',
-  description: 'Event photos, equipment setups, production reels and highlight videos from AV-TEC — filter by photos or videos.',
-  alternates: { canonical: '/gallery' },
-  openGraph: { url: '/gallery', title: 'Gallery | AV-TEC', description: 'Event photos, equipment setups, production reels and highlight videos from AV-TEC — filter by photos or videos.' },
+  title: 'Gallery | AV-TEC Event Production Work',
+  description: "Browse photos and videos of AV-TEC's audio, lighting, video, and staging work from past events in Bengaluru and beyond.",
+  alternates: {
+    canonical: '/gallery',
+    languages: { 'en-IN': '/gallery', 'en': '/gallery' },
+  },
+  openGraph: {
+    url: '/gallery',
+    title: 'Gallery | AV-TEC Event Production Work',
+    description: "Browse photos and videos of AV-TEC's audio, lighting, video, and staging work from past events in Bengaluru and beyond.",
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.avtecindia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Gallery', item: 'https://www.avtecindia.com/gallery' },
+  ],
+};
+
+const imageGalleryJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageGallery',
+  name: 'AV-TEC Audio Visual Event & Equipment Gallery',
+  description: 'Live event photos, stage lighting setups, D&B audio systems, and LED video wall installations.',
+  url: 'https://www.avtecindia.com/gallery',
+  image: GALLERY_IMAGES.map((img) => ({
+    '@type': 'ImageObject',
+    contentUrl: `https://www.avtecindia.com${img.src}`,
+    name: img.title,
+    caption: img.equipment || img.service,
+  })),
 };
 
 export default function GalleryPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGalleryJsonLd) }}
+      />
       <PageHero
         eyebrow="Our Work"
         title="Gallery"
