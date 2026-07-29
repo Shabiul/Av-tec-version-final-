@@ -107,10 +107,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section">
         <div className="section-center">
           <h2 className="heading-crimson">Equipment Inventory</h2>
+          <div className="trusted-strip" style={{ marginTop: '28px' }}>
+            {s.equipment.slice(0, 8).map((e) => (
+              <span key={e}>{e}</span>
+            ))}
+          </div>
         </div>
-        <ul className="equipment-list">
-          {s.equipment.map((e) => <li key={e}>{e}</li>)}
-        </ul>
       </section>
 
       {/* ═══ REVIEWS ═══ */}

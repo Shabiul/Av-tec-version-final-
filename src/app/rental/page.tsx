@@ -47,6 +47,16 @@ export default function RentalPage() {
         bgVideo="/assets/videos/hero/hero-main.mp4"
       />
 
+      {/* ═══ INQUIRY FORM ═══ */}
+      <section className="section rental-form-section">
+        <div className="contact-inner">
+          <span className="eyebrow" style={{ color: 'var(--orange)' }}>Rental Inquiry</span>
+          <h2>Request a Quote</h2>
+          <p className="contact-subtitle">Share your event details and equipment needs — we&apos;ll get back with a tailored quote.</p>
+          <ContactForm subject="New AV-TEC Rental Inquiry" />
+        </div>
+      </section>
+
       {/* ═══ EVENT TYPES ═══ */}
       <section className="section">
         <div className="section-center">
@@ -69,16 +79,6 @@ export default function RentalPage() {
               <p>{i.desc}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ═══ INQUIRY FORM ═══ */}
-      <section className="section rental-form-section">
-        <div className="contact-inner">
-          <span className="eyebrow" style={{ color: 'var(--orange)' }}>Rental Inquiry</span>
-          <h2>Request a Quote</h2>
-          <p className="contact-subtitle">Share your event details and equipment needs — we&apos;ll get back with a tailored quote.</p>
-          <ContactForm subject="New AV-TEC Rental Inquiry" />
         </div>
       </section>
     </div>

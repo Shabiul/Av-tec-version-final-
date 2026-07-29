@@ -4,7 +4,17 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { TESTIMONIALS } from '@/data/testimonials';
 
-export default function TestimonialsSlider() {
+interface TestimonialsSliderProps {
+  showCta?: boolean;
+  ctaLink?: string;
+  ctaText?: string;
+}
+
+export default function TestimonialsSlider({
+  showCta = true,
+  ctaLink = '/work',
+  ctaText = 'SEE PROOF OF WORK',
+}: TestimonialsSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -93,9 +103,11 @@ export default function TestimonialsSlider() {
           </button>
         </div>
 
-        <div style={{ marginTop: '16px' }}>
-          <Link href="/work" className="btn-testimonial-cta">SEE PROOF OF WORK</Link>
-        </div>
+        {showCta && (
+          <div style={{ marginTop: '16px' }}>
+            <Link href={ctaLink} className="btn-testimonial-cta">{ctaText}</Link>
+          </div>
+        )}
       </div>
     </div>
   );
