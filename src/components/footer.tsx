@@ -2,11 +2,6 @@ import Link from 'next/link';
 
 // Social profile URLs — replace '#' with the client's real profile links.
 const SOCIAL: Record<string, { label: string; url: string; path: string }> = {
-  linkedin: {
-    label: 'AV-TEC on LinkedIn',
-    url: '#',
-    path: 'M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM20 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0014 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z',
-  },
   instagram: {
     label: 'AV-TEC on Instagram',
     url: '#',
@@ -43,7 +38,7 @@ export default function Footer() {
         <div className="footer-social-row">
           <span className="footer-social-label">Follow Us</span>
           <div className="footer-social">
-            {(['linkedin', 'instagram'] as const).map((s) => (
+            {(['instagram'] as const).map((s) => (
               <a key={s} href={SOCIAL[s].url} aria-label={SOCIAL[s].label} target="_blank" rel="noopener noreferrer"><SocialIcon name={s} /></a>
             ))}
           </div>
@@ -66,7 +61,21 @@ export default function Footer() {
             <a href="mailto:balaji@avtecindia.com">balaji@avtecindia.com</a>
           </div>
         </div>
-        <p className="footer-copy">&copy; {new Date().getFullYear()} AV-TEC. All rights reserved.</p>
+        <p className="footer-copy">
+          &copy; {new Date().getFullYear()} AV-TEC. All rights reserved.
+          <span className="footer-sep" style={{ margin: '0 8px' }}>•</span>
+          <span>
+            Designed &amp; Developed by{' '}
+            <a
+              href="https://naazailabs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-credit-link"
+            >
+              naazailabs.com
+            </a>
+          </span>
+        </p>
       </div>
     </footer>
   );

@@ -45,8 +45,8 @@ export default function Header() {
 
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
-      <div className="header-inner">
-        <Link href="/" className="header-brand">
+      <div className="header-bar">
+        <Link href="/" className="header-brand" aria-label="AV-TEC Home">
           <img
             className="header-logo"
             src="/assets/images/logos/logo-web.png"
@@ -56,35 +56,39 @@ export default function Header() {
           />
           <span className="header-tagline">Where Innovation Meets Experiences</span>
         </Link>
+
+        <nav
+          ref={navRef}
+          className={`header-nav ${menuOpen ? 'is-open' : ''}`}
+          aria-label="Primary navigation"
+        >
+          {NAV_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className={`header-nav-link ${
+                pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href)) ? 'active' : ''
+              }`}
+              onClick={() => setMenuOpen(false)}
+            >
+              {l.label}
+            </Link>
+          ))}
+          <div className="header-theme-wrap">
+            <ThemeToggle />
+          </div>
+        </nav>
+
+        <button
+          className={`menu-toggle ${menuOpen ? 'is-open' : ''}`}
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span /><span /><span />
+        </button>
       </div>
-      <nav
-        ref={navRef}
-        className={`header-nav ${menuOpen ? 'is-open' : ''}`}
-        aria-label="Primary navigation"
-      >
-        {NAV_LINKS.map((l) => (
-          <Link
-            key={l.href}
-            href={l.href}
-            className={`header-nav-link ${pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href)) ? 'active' : ''}`}
-            onClick={() => setMenuOpen(false)}
-          >
-            {l.label}
-          </Link>
-        ))}
-        <div style={{ padding: '0 12px', display: 'flex', alignItems: 'center' }}>
-          <ThemeToggle />
-        </div>
-      </nav>
-      <button
-        className={`menu-toggle ${menuOpen ? 'is-open' : ''}`}
-        type="button"
-        aria-label="Toggle menu"
-        aria-expanded={menuOpen}
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <span /><span /><span />
-      </button>
     </header>
   );
 }

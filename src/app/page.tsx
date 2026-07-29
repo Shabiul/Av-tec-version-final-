@@ -7,6 +7,7 @@ import { GALLERY_IMAGES } from '@/data/gallery';
 import { TESTIMONIALS } from '@/data/testimonials';
 import HeroVideo from '@/components/HeroVideo';
 import CountUp from '@/components/CountUp';
+import TestimonialsSlider from '@/components/TestimonialsSlider';
 
 const STATS = [
   { num: '30+', label: 'Years' },
@@ -15,7 +16,6 @@ const STATS = [
 ];
 
 const FEATURED = GALLERY_IMAGES.slice(0, 6);
-const t = TESTIMONIALS[0];
 
 export default function Home() {
   return (
@@ -117,17 +117,7 @@ export default function Home() {
       {/* ═══ TESTIMONIAL HIGHLIGHT ═══ */}
       <section className="section testimonials-section">
         <div className="section-bg"><img src="/assets/images/gallery/festival-night-show.jpg" alt="AV-TEC event stage" aria-hidden="true" loading="lazy" /></div>
-        <div className="testimonial-content">
-          <span className="eyebrow">TESTIMONIALS</span>
-          <h2>What Our Clients Say</h2>
-          <p className="testimonial-quote">&ldquo;{t.quote}&rdquo;</p>
-          <div className="testimonial-avatar">{t.initials}</div>
-          <p className="testimonial-name">{t.name}</p>
-          <p className="testimonial-role">{t.role}</p>
-          <div>
-            <Link href="/work" className="btn-testimonial-cta">SEE PROOF OF WORK</Link>
-          </div>
-        </div>
+        <TestimonialsSlider />
       </section>
 
       {/* ═══ CTA BAND ═══ */}

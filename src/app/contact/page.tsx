@@ -38,9 +38,13 @@ export default function ContactPage() {
         bg="/assets/images/gallery/festival-night-show.jpg"
       />
       <section className="section">
+        <div className="section-center" style={{ maxWidth: '860px', marginBottom: '32px' }}>
+          <span className="eyebrow">Instant Quote Enquiry</span>
+          <h2 className="heading-crimson">Request a Quote</h2>
+        </div>
         <div className="contact-layout">
           <div className="contact-inner" style={{ margin: 0 }}>
-            <ContactForm subject="New AV-TEC Enquiry" />
+            <ContactForm subject="New AV-TEC Quote Enquiry" />
           </div>
           <div className="contact-info">
             <div className="contact-info-card">

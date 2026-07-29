@@ -16,6 +16,7 @@ export interface EnquiryInput {
   name?: string;
   company?: string;
   email?: string;
+  setup_date?: string;
   date?: string;
   event_type?: string;
   location?: string;
@@ -28,6 +29,7 @@ export interface EnquiryNormalized {
   name: string;
   company: string;
   email: string;
+  setup_date: string;
   date: string;
   event_type: string;
   location: string;
@@ -87,9 +89,19 @@ export function validateEnquiry(input: EnquiryInput): EnquiryResult {
   if (!email) errors.email = 'Enter a valid email address.';
   else if (email.length > 254 || !EMAIL_RE.test(email)) errors.email = 'Enter a valid email address.';
 
+  const setup_date = (input.setup_date ?? '').trim();
   const date = (input.date ?? '').trim();
+
+  if (setup_date && !isFutureDate(setup_date)) {
+    errors.setup_date = 'Select a valid setup date.';
+  }
+
   if (!date) errors.date = 'Select a valid future event date.';
   else if (!isFutureDate(date)) errors.date = 'Select a valid future event date.';
+
+  if (setup_date && date && setup_date > date) {
+    errors.setup_date = 'Setup date cannot be after event date.';
+  }
 
   const event_type = (input.event_type ?? '').trim();
   if (!EVENT_TYPES.includes(event_type)) errors.event_type = 'Please select an event type.';
@@ -118,6 +130,7 @@ export function validateEnquiry(input: EnquiryInput): EnquiryResult {
     name,
     company,
     email,
+    setup_date,
     date,
     event_type,
     location,

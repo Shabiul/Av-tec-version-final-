@@ -93,7 +93,7 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
 
       {/* ═══ TESTIMONIAL ═══ */}
       {c.testimonial && (
-        <section className="section deep-section">
+        <section className="section client-feedback-section">
           <div className="testimonial-content">
             <span className="eyebrow">Client Feedback</span>
             <p className="testimonial-quote">&ldquo;{c.testimonial.quote}&rdquo;</p>

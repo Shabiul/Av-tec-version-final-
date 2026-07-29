@@ -34,6 +34,7 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
       name: String(data.get('name') ?? ''),
       company: String(data.get('company') ?? ''),
       email: String(data.get('email') ?? ''),
+      setup_date: String(data.get('setup_date') ?? ''),
       date: String(data.get('date') ?? ''),
       event_type: String(data.get('event_type') ?? ''),
       location: String(data.get('location') ?? ''),
@@ -165,6 +166,49 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
           {errors.email && (
             <span className="field-error" id="err-email" role="alert">
               {errors.email}
+            </span>
+          )}
+        </label>
+        <label htmlFor="cf-phone">
+          Phone <span className="req" aria-hidden="true">*</span>
+          <input
+            id="cf-phone"
+            name="phone"
+            type="tel"
+            inputMode="numeric"
+            placeholder="+91"
+            autoComplete="tel"
+            aria-required="true"
+            aria-invalid={!!errors.phone}
+            aria-describedby={errors.phone ? 'err-phone' : undefined}
+          />
+          {errors.phone && (
+            <span className="field-error" id="err-phone" role="alert">
+              {errors.phone}
+            </span>
+          )}
+        </label>
+      </div>
+      <div className="form-row">
+        <label htmlFor="cf-setup-date">
+          Setup Date
+          <input
+            id="cf-setup-date"
+            name="setup_date"
+            type="date"
+            min={minDate}
+            onClick={(e) => {
+              try { e.currentTarget.showPicker(); } catch {}
+            }}
+            onFocus={(e) => {
+              try { e.currentTarget.showPicker(); } catch {}
+            }}
+            aria-invalid={!!errors.setup_date}
+            aria-describedby={errors.setup_date ? 'err-setup-date' : undefined}
+          />
+          {errors.setup_date && (
+            <span className="field-error" id="err-setup-date" role="alert">
+              {errors.setup_date}
             </span>
           )}
         </label>

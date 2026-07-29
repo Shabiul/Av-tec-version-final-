@@ -113,7 +113,6 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
                 key={item.src}
                 className="lightbox-video"
                 src={encodeURI(item.src)}
-                poster={item.poster}
                 controls
                 autoPlay
                 preload="metadata"

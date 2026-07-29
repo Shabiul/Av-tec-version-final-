@@ -83,23 +83,14 @@ export default function FAQPage() {
 
       <section className="section">
         <div className="section-center" style={{ maxWidth: 860, textAlign: 'left' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div className="faq-grid">
             {FAQS.map((faq, index) => (
-              <div
-                key={index}
-                style={{
-                  padding: '24px',
-                  borderRadius: 'var(--radius)',
-                  background: 'rgba(10,22,40,0.5)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                }}
-              >
-                <h3 style={{ fontSize: '1.15rem', color: '#fff', marginBottom: '12px' }}>
+              <div key={index} className="faq-card">
+                <h3 className="faq-question">
+                  <span className="faq-q-badge">Q</span>
                   {faq.q}
                 </h3>
-                <p style={{ color: 'var(--muted)', fontSize: '0.96rem', lineHeight: '1.6', margin: 0 }}>
-                  {faq.a}
-                </p>
+                <p className="faq-answer">{faq.a}</p>
               </div>
             ))}
           </div>

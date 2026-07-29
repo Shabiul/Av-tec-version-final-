@@ -42,7 +42,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     challenge: 'Deliver even, high-SPL coverage across a 25,000-capacity open ground with a tight overnight build window and unpredictable monsoon weather.',
     solution: 'A D&B GSL main hang with delay towers designed in ArrayCalc, weather-protected under a Prolyte roof, with fully redundant FOH and monitor consoles.',
     results: ['Even coverage front-to-back with no dead zones', 'Zero downtime across three show days', 'Sub-8-hour overnight rig and soundcheck'],
-    testimonial: { quote: 'The truss system was up in hours and rock solid. Their rigging team is world-class.', name: 'Arun Sharma', role: 'Festival Organizer' },
+    testimonial: { quote: 'Highly Professional and technically sound... Never met an event manager with such a performa and Brilliance in India. Highly recommended for all international events...', name: 'Raj vinod kumar', role: 'Local Guide' },
   },
   {
     slug: 'corporate-product-launch',
@@ -63,7 +63,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     challenge: 'Create a premium reveal moment on a fine-pitch LED wall with pixel-perfect content playback and live camera IMAG for a launch keynote.',
     solution: 'A seamless P2.6 indoor wall driven by a Disguise media server, ATEM switching for IMAG, and a moving-light rig timecoded to the show.',
     results: ['Flawless content playback with no frame drops', 'Broadcast-grade IMAG for the room and livestream', 'Premium first impression from doors-open'],
-    testimonial: { quote: 'The lighting and video wall made our product launch feel premium from the first guest arrival.', name: 'Sana Mehta', role: 'Brand Manager' },
+    testimonial: { quote: 'In the two installations I worked on, I had the pleasure of collaborating with Avtec, and I can highly recommend them. They are punctual and efficient, understand the processes thoroughly, and went above and beyond.', name: 'Firat SHADÉ', role: 'Client' },
   },
   {
     slug: 'corporate-conference',
@@ -83,7 +83,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     challenge: 'Run three parallel breakout rooms plus a main plenary with reliable wireless mics and clean show-calling across a packed agenda.',
     solution: 'Networked Dante audio across rooms, coordinated Axient Digital RF, and a calm central show-call position feeding every space.',
     results: ['Zero RF dropouts across 40+ wireless channels', 'On-time transitions for every session', 'One integrated crew across all rooms'],
-    testimonial: { quote: 'Setup was on time, microphones were flawless, and the show calling felt calm and professional.', name: 'Rahul Kapoor', role: 'Conference Lead' },
+    testimonial: { quote: 'Highly Professional and technically sound... Never met an event manager with such a performa and Brilliance in India.', name: 'Ramesh M', role: 'Client' },
   },
   {
     slug: 'destination-wedding',
@@ -103,7 +103,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     challenge: 'Deliver elegant, wireless-controlled ambience across multiple outdoor venues without visible cabling or intrusive gear.',
     solution: 'Battery-powered Astera fixtures on wireless DMX with discreet point-source audio, tuned for each ceremony and reception space.',
     results: ['Cable-free, camera-ready ambience', 'Seamless moves between ceremony and reception', 'Refined look that never felt overdone'],
-    testimonial: { quote: 'The ambience, audio, and stage lights were elegant without ever feeling overdone.', name: 'Nisha Kumar', role: 'Wedding Planner' },
+    testimonial: { quote: 'One of the best event coordinator s in city', name: 'M.Suresh Kanthan', role: 'Local Guide' },
   },
 ];
 
