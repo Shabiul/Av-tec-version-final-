@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Lightbox, { LightboxItem } from './Lightbox';
+import VideoThumb from './VideoThumb';
 import type { GalleryImage, GalleryVideo } from '@/data/gallery';
 
 interface GalleryProps {
@@ -30,7 +31,7 @@ export default function Gallery({ variant = 'image', images = [], videos = [] }:
         {isVideo
           ? videos.map((v, i) => (
               <button key={v.src} className="video-card" type="button" onClick={() => setIndex(i)} aria-label={`Play ${v.title}`}>
-                <img src={v.poster} alt={v.title} loading="lazy" />
+                <VideoThumb src={v.src} alt={v.title} />
                 <span className="play-badge"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span></span>
                 <span className="thumb-label">{v.title}<small>{v.service}</small></span>
               </button>

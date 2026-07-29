@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Lightbox, { LightboxItem } from './Lightbox';
+import VideoThumb from './VideoThumb';
 import type { GalleryImage, GalleryVideo } from '@/data/gallery';
 
 interface GalleryExplorerProps {
@@ -74,7 +75,7 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
     const clips: GxItem[] = videos.map((v) => ({
       kind: 'video',
       src: v.src,
-      thumb: v.poster,
+      thumb: v.poster || v.src,
       title: v.title,
       service: v.service,
       meta: joinMeta(v.equipment, v.venue),
@@ -164,7 +165,11 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
                 onClick={() => setSelectedSrc(item.src)}
                 aria-label={`${item.kind === 'video' ? 'Play' : 'View'} ${item.title}`}
               >
-                <img src={item.thumb} alt={item.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                {item.kind === 'video' ? (
+                  <VideoThumb src={item.src} alt={item.title} />
+                ) : (
+                  <img src={item.thumb} alt={item.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                )}
                 {item.kind === 'video' && (
                   <span className="play-badge">
                     <span>
