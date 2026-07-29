@@ -36,7 +36,7 @@ const MARQUEE = [
   'Oliver System Limited',
   'Teleprompter',
   'Quiz Buzzer',
-  'Clear Communication Units',
+  'Clear Comms Units',
 ];
 
 function Stars({ n = 5 }: { n?: number }) {

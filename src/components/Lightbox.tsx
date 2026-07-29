@@ -79,8 +79,20 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
         >
-          <button className="lightbox-close" type="button" onClick={onClose} aria-label="Close">
-            &times;
+          <button
+            className="lightbox-close"
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+            aria-label="Close"
+            title="Close (Esc)"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
           </button>
 
           {items.length > 1 && (
@@ -105,50 +117,49 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
             </>
           )}
 
-          {/* The media pops forward from the center — scales up and fades in
-              (and swaps with a quick pop on prev/next via the keyed motion). */}
-          <AnimatePresence mode="wait">
-            {item.type === 'video' ? (
-              <motion.video
-                key={item.src}
-                className="lightbox-video"
-                src={encodeURI(item.src)}
-                poster={item.poster}
-                controls
-                autoPlay
-                preload="metadata"
-                playsInline
-                onClick={(e) => e.stopPropagation()}
-                initial={{ opacity: 0, scale: 0.9, y: 12 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
-              />
-            ) : (
-              <motion.img
-                key={item.src}
-                src={item.src}
-                alt={item.title}
-                onClick={(e) => e.stopPropagation()}
-                initial={{ opacity: 0, scale: 0.9, y: 12 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
-              />
-            )}
-          </AnimatePresence>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <AnimatePresence mode="wait">
+              {item.type === 'video' ? (
+                <motion.video
+                  key={item.src}
+                  className="lightbox-video"
+                  src={encodeURI(item.src)}
+                  poster={item.poster}
+                  controls
+                  autoPlay
+                  preload="metadata"
+                  playsInline
+                  initial={{ opacity: 0, scale: 0.94, y: 8 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                />
+              ) : (
+                <motion.img
+                  key={item.src}
+                  src={item.src}
+                  alt={item.title}
+                  initial={{ opacity: 0, scale: 0.94, y: 8 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                />
+              )}
+            </AnimatePresence>
 
-          <motion.div
-            className="lightbox-caption"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, delay: 0.08 }}
-          >
-            <h3>{item.title}</h3>
-            {item.tag && <span className="cap-tag">{item.tag}</span>}
-            {item.meta && <p>{item.meta}</p>}
-          </motion.div>
+            <motion.div
+              className="lightbox-caption"
+              key={`cap-${item.src}`}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.22, delay: 0.05 }}
+            >
+              <h3>{item.title}</h3>
+              {item.tag && <span className="cap-tag">{item.tag}</span>}
+              {item.meta && <p>{item.meta}</p>}
+            </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>,
