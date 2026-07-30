@@ -36,8 +36,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     heroImage: '/images/IMG_4001.jpg',
     images: [
       '/images/IMG_4001.jpg',
-      '/assets/images/gallery/monitor-world.jpg',
-      '/assets/images/gallery/roof-rigging-build.jpg',
+      '/images/IMG_3998.jpg',
+      '/images/IMG_4072.jpg',
+      '/images/IMG_4064.JPG.jpeg',
     ],
     challenge: 'Deliver even, high-SPL coverage across a 25,000-capacity open ground with a tight overnight build window and unpredictable monsoon weather.',
     solution: 'A D&B GSL main hang with delay towers designed in ArrayCalc, weather-protected under a Prolyte roof, with fully redundant FOH and monitor consoles.',
