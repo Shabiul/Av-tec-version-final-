@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/av-tec-videos/:path*',
+        source: '/videos/:path*',
         headers: [
           { key: 'Accept-Ranges', value: 'bytes' },
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
@@ -21,19 +21,15 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/av-tec-videos-collection/:path*',
+        source: '/images/:path*',
         headers: [
-          { key: 'Accept-Ranges', value: 'bytes' },
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
         ],
       },
       {
-        source: '/assets/videos/:path*',
+        source: '/assets/:path*',
         headers: [
-          { key: 'Accept-Ranges', value: 'bytes' },
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
         ],
       },
     ];
