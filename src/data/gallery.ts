@@ -85,6 +85,5 @@ export const GALLERY_VIDEOS: GalleryVideo[] = [
   { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220715_101545.mp4', title: 'Rigging Safety & Load Inspection', service: 'Trussing & Rigging', equipment: 'Rigging Hardware', duration: '3:15' },
   { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220806_072641.mp4', title: 'Outdoor Screen Sunrise Test', service: 'Video & LED Walls', equipment: 'Outdoor P3.9 LED', duration: '2:10' },
   { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220806_072719.mp4', title: 'Stage Sound System Power-Up', service: 'Audio Systems', equipment: 'Power Amplifiers & Subs', duration: '2:40' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_236470801_043607_994.mp4', title: 'Stage Light Chase Pattern Test', service: 'Stage Lighting', equipment: 'Moving Head Fixtures', duration: '1:25' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_241460317_020746_261.mp4', title: 'LED Video Processor Signal Check', service: 'Video & LED Walls', equipment: 'Video Processor', duration: '1:30' }
+  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_236470801_043607_994.mp4', title: 'Stage Light Chase Pattern Test', service: 'Stage Lighting', equipment: 'Moving Head Fixtures', duration: '1:25' }
 ];
