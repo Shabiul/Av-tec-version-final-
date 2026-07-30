@@ -22,8 +22,8 @@ export interface GalleryVideo {
 /* ============================================================
    AV-TEC Official Gallery Media Collection
    Sourced from:
-   - /A V TEC VIDEOS AND IMAGES/
-   - /A V TEC VIDEOS AND IMAGES copy/
+   - /av-tec-videos/
+   - /av-tec-videos-collection/
    - /assets/images/gallery/
    All duplicate files filtered out with 100% unique paths.
    ============================================================ */
@@ -61,29 +61,29 @@ export const GALLERY_IMAGES: GalleryImage[] = [
 ];
 
 export const GALLERY_VIDEOS: GalleryVideo[] = [
-  { src: '/A V TEC VIDEOS AND IMAGES/IMG_6585.MP4', title: 'Lighting & Truss System Demo', service: 'Stage Lighting', equipment: 'Robe Moving Heads & Prolyte Truss', duration: '2:10' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20231120-WA0008.mp4', title: 'Destination Wedding Stage Wash', service: 'Stage Lighting', equipment: 'Astera AX1 Wireless Lights', duration: '1:15' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20240109-WA0001.mp4', title: 'Corporate Launch Presentation', service: 'Video & LED Walls', equipment: 'ATEM Switching & Video Wall', duration: '1:30' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20240223-WA0024.mp4', title: 'Stage Lighting Timecode Sequence', service: 'Stage Lighting', equipment: 'Clay Paky Sharpy Fixtures', duration: '1:45' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20240223-WA0026.mp4', title: 'Ground Support Trussing Load-In', service: 'Trussing & Rigging', equipment: 'CM Lodestar Hoists & Truss', duration: '2:20' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20240224-WA0017.mp4', title: 'FOH Soundcheck Session', service: 'Audio Systems', equipment: 'DiGiCo Console & Line Array', duration: '1:10' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20240505-WA0008.mp4', title: 'Outdoor Music Festival Highlights', service: 'Event Production', equipment: 'Complete Festival AV Rig', duration: '2:15' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20240505-WA0009.mp4', title: 'P2.5 Outdoor LED Wall Playback', service: 'Video & LED Walls', equipment: 'P2.5 Outdoor LED Video Screen', duration: '2:50' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20240505-WA0010.mp4', title: 'Moving Head Beam Effects', service: 'Stage Lighting', equipment: 'Robe MegaPointe Beams', duration: '1:30' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20240921-WA0011.mp4', title: 'Show Control & Calling Center', service: 'Tech Consultancy', equipment: 'Central Show Control Desk', duration: '1:50' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20241112-WA0000.mp4', title: 'Permanent AV System Commissioning', service: 'Installs & Integrations', equipment: 'Auditorium AV Setup', duration: '2:10' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20241123-WA0004.mp4', title: 'Stage Lighting & Ambience Warmup', service: 'Stage Lighting', equipment: 'Warm LED Wash Fixtures', duration: '1:20' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20241123-WA0006.mp4', title: 'Corporate Boardroom System Test', service: 'Installs & Integrations', equipment: 'Poly Studio & Crestron', duration: '1:05' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID-20241123-WA0009.mp4', title: 'Monitor Console Wireless Coordination', service: 'Audio Systems', equipment: 'Shure Axient Digital Mics', duration: '1:40' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20211127_020914.mp4', title: 'Arena Concert Production', service: 'Event Production', equipment: 'Full Arena Rig', duration: '3:10' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220419_230555.mp4', title: 'Product Launch Stage Production', service: 'Video & LED Walls', equipment: 'LED Walls & Lighting', duration: '3:40' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220513_200910.mp4', title: 'Destination Wedding Night Production', service: 'Stage Lighting', equipment: 'Ambient Wash & Spotlights', duration: '2:25' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220514_102256.mp4', title: 'Corporate Conference Morning Setup', service: 'Video & LED Walls', equipment: 'Conference AV Systems', duration: '2:15' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220514_110326.mp4', title: 'FOH Desk Audio Calibration', service: 'Audio Systems', equipment: 'Digital Mixing Console', duration: '2:00' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220514_215550.mp4', title: 'Lighting Strobe & Laser Show', service: 'Stage Lighting', equipment: 'Strobe & Laser Rig', duration: '2:30' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220514_215833.mp4', title: 'Live Festival Crowd Audio', service: 'Audio Systems', equipment: 'D&B Line Array', duration: '3:50' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220715_101545.mp4', title: 'Rigging Safety & Load Inspection', service: 'Trussing & Rigging', equipment: 'Rigging Hardware', duration: '3:15' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220806_072641.mp4', title: 'Outdoor Screen Sunrise Test', service: 'Video & LED Walls', equipment: 'Outdoor P3.9 LED', duration: '2:10' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220806_072719.mp4', title: 'Stage Sound System Power-Up', service: 'Audio Systems', equipment: 'Power Amplifiers & Subs', duration: '2:40' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_236470801_043607_994.mp4', title: 'Stage Light Chase Pattern Test', service: 'Stage Lighting', equipment: 'Moving Head Fixtures', duration: '1:25' }
+  { src: '/av-tec-videos/IMG_6585.MP4', title: 'Lighting & Truss System Demo', service: 'Stage Lighting', equipment: 'Robe Moving Heads & Prolyte Truss', duration: '2:10' },
+  { src: '/av-tec-videos-collection/VID-20231120-WA0008.mp4', title: 'Destination Wedding Stage Wash', service: 'Stage Lighting', equipment: 'Astera AX1 Wireless Lights', duration: '1:15' },
+  { src: '/av-tec-videos-collection/VID-20240109-WA0001.mp4', title: 'Corporate Launch Presentation', service: 'Video & LED Walls', equipment: 'ATEM Switching & Video Wall', duration: '1:30' },
+  { src: '/av-tec-videos-collection/VID-20240223-WA0024.mp4', title: 'Stage Lighting Timecode Sequence', service: 'Stage Lighting', equipment: 'Clay Paky Sharpy Fixtures', duration: '1:45' },
+  { src: '/av-tec-videos-collection/VID-20240223-WA0026.mp4', title: 'Ground Support Trussing Load-In', service: 'Trussing & Rigging', equipment: 'CM Lodestar Hoists & Truss', duration: '2:20' },
+  { src: '/av-tec-videos-collection/VID-20240224-WA0017.mp4', title: 'FOH Soundcheck Session', service: 'Audio Systems', equipment: 'DiGiCo Console & Line Array', duration: '1:10' },
+  { src: '/av-tec-videos-collection/VID-20240505-WA0008.mp4', title: 'Outdoor Music Festival Highlights', service: 'Event Production', equipment: 'Complete Festival AV Rig', duration: '2:15' },
+  { src: '/av-tec-videos-collection/VID-20240505-WA0009.mp4', title: 'P2.5 Outdoor LED Wall Playback', service: 'Video & LED Walls', equipment: 'P2.5 Outdoor LED Video Screen', duration: '2:50' },
+  { src: '/av-tec-videos-collection/VID-20240505-WA0010.mp4', title: 'Moving Head Beam Effects', service: 'Stage Lighting', equipment: 'Robe MegaPointe Beams', duration: '1:30' },
+  { src: '/av-tec-videos-collection/VID-20240921-WA0011.mp4', title: 'Show Control & Calling Center', service: 'Tech Consultancy', equipment: 'Central Show Control Desk', duration: '1:50' },
+  { src: '/av-tec-videos-collection/VID-20241112-WA0000.mp4', title: 'Permanent AV System Commissioning', service: 'Installs & Integrations', equipment: 'Auditorium AV Setup', duration: '2:10' },
+  { src: '/av-tec-videos-collection/VID-20241123-WA0004.mp4', title: 'Stage Lighting & Ambience Warmup', service: 'Stage Lighting', equipment: 'Warm LED Wash Fixtures', duration: '1:20' },
+  { src: '/av-tec-videos-collection/VID-20241123-WA0006.mp4', title: 'Corporate Boardroom System Test', service: 'Installs & Integrations', equipment: 'Poly Studio & Crestron', duration: '1:05' },
+  { src: '/av-tec-videos-collection/VID-20241123-WA0009.mp4', title: 'Monitor Console Wireless Coordination', service: 'Audio Systems', equipment: 'Shure Axient Digital Mics', duration: '1:40' },
+  { src: '/av-tec-videos-collection/VID_20211127_020914.mp4', title: 'Arena Concert Production', service: 'Event Production', equipment: 'Full Arena Rig', duration: '3:10' },
+  { src: '/av-tec-videos-collection/VID_20220419_230555.mp4', title: 'Product Launch Stage Production', service: 'Video & LED Walls', equipment: 'LED Walls & Lighting', duration: '3:40' },
+  { src: '/av-tec-videos-collection/VID_20220513_200910.mp4', title: 'Destination Wedding Night Production', service: 'Stage Lighting', equipment: 'Ambient Wash & Spotlights', duration: '2:25' },
+  { src: '/av-tec-videos-collection/VID_20220514_102256.mp4', title: 'Corporate Conference Morning Setup', service: 'Video & LED Walls', equipment: 'Conference AV Systems', duration: '2:15' },
+  { src: '/av-tec-videos-collection/VID_20220514_110326.mp4', title: 'FOH Desk Audio Calibration', service: 'Audio Systems', equipment: 'Digital Mixing Console', duration: '2:00' },
+  { src: '/av-tec-videos-collection/VID_20220514_215550.mp4', title: 'Lighting Strobe & Laser Show', service: 'Stage Lighting', equipment: 'Strobe & Laser Rig', duration: '2:30' },
+  { src: '/av-tec-videos-collection/VID_20220514_215833.mp4', title: 'Live Festival Crowd Audio', service: 'Audio Systems', equipment: 'D&B Line Array', duration: '3:50' },
+  { src: '/av-tec-videos-collection/VID_20220715_101545.mp4', title: 'Rigging Safety & Load Inspection', service: 'Trussing & Rigging', equipment: 'Rigging Hardware', duration: '3:15' },
+  { src: '/av-tec-videos-collection/VID_20220806_072641.mp4', title: 'Outdoor Screen Sunrise Test', service: 'Video & LED Walls', equipment: 'Outdoor P3.9 LED', duration: '2:10' },
+  { src: '/av-tec-videos-collection/VID_20220806_072719.mp4', title: 'Stage Sound System Power-Up', service: 'Audio Systems', equipment: 'Power Amplifiers & Subs', duration: '2:40' },
+  { src: '/av-tec-videos-collection/VID_236470801_043607_994.mp4', title: 'Stage Light Chase Pattern Test', service: 'Stage Lighting', equipment: 'Moving Head Fixtures', duration: '1:25' }
 ];
