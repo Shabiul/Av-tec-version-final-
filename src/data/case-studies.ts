@@ -33,9 +33,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     equipment: ['D&B GSL Line Array', 'DiGiCo SD7', 'Prolyte Roof System', 'CM Lodestar Hoists'],
     audience: '25,000+',
     duration: '3 days',
-    heroImage: '/assets/images/gallery/main-stage-line-array.jpg',
+    heroImage: '/images/IMG_4001.jpg',
     images: [
-      '/assets/images/gallery/main-stage-line-array.jpg',
+      '/images/IMG_4001.jpg',
       '/assets/images/gallery/monitor-world.jpg',
       '/assets/images/gallery/roof-rigging-build.jpg',
     ],
@@ -54,9 +54,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     equipment: ['P2.6 Indoor LED', 'Blackmagic ATEM', 'Robe MegaPointe', 'Disguise Media Server'],
     audience: '1,200',
     duration: '1 day',
-    heroImage: '/assets/images/gallery/led-wall-product-launch.jpg',
+    heroImage: '/images/image.png',
     images: [
-      '/assets/images/gallery/led-wall-product-launch.jpg',
+      '/images/image.png',
       '/assets/images/gallery/corporate-keynote-screen.jpg',
       '/assets/images/gallery/concert-lighting-rig.jpg',
     ],
