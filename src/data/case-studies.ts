@@ -57,9 +57,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     duration: '1 day',
     heroImage: '/images/image.png',
     images: [
+      '/images/IMG_3727.JPG.jpeg',
       '/images/image.png',
-      '/assets/images/gallery/corporate-keynote-screen.jpg',
-      '/assets/images/gallery/concert-lighting-rig.jpg',
     ],
     challenge: 'Create a premium reveal moment on a fine-pitch LED wall with pixel-perfect content playback and live camera IMAG for a launch keynote.',
     solution: 'A seamless P2.6 indoor wall driven by a Disguise media server, ATEM switching for IMAG, and a moving-light rig timecoded to the show.',
