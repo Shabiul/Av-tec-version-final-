@@ -20,7 +20,7 @@ export const SERVICES: Record<string, Service> = {
   audio: {
     slug: 'audio',
     title: 'Audio Systems',
-    hero: '/assets/images/gallery/main-stage-line-array.jpg',
+    hero: '/images/IMG_4059.jpg',
     intro: 'AV-TEC provides end-to-end professional sound reinforcement for events of every scale — from corporate summits to large-capacity festivals. With over three decades of live-sound expertise, we deliver crystal-clear audio tailored to your venue acoustics and audience size.',
     subServices: [
       {
@@ -67,7 +67,7 @@ export const SERVICES: Record<string, Service> = {
   lighting: {
     slug: 'lighting',
     title: 'Stage Lighting',
-    hero: '/assets/images/gallery/concert-lighting-rig.jpg',
+    hero: '/images/IMG_4064.JPG.jpeg',
     intro: 'AV-TEC\'s lighting division transforms venues with intelligent lighting design — from elegant wash lighting for corporate summits to high-energy concert productions with moving heads, lasers, and pixel-mapped LED fixtures.',
     subServices: [
       {
@@ -114,7 +114,7 @@ export const SERVICES: Record<string, Service> = {
   video: {
     slug: 'video',
     title: 'Video & LED Walls',
-    hero: '/assets/images/gallery/led-wall-product-launch.jpg',
+    hero: '/images/IMG_3727.JPG.jpeg',
     intro: 'AV-TEC delivers stunning visual impact through indoor and outdoor LED walls, high-lumen laser projectors, glass teleprompters, camera packages, and video mixing units.',
     subServices: [
       {
@@ -161,7 +161,7 @@ export const SERVICES: Record<string, Service> = {
   trussing: {
     slug: 'trussing',
     title: 'Trussing & Rigging',
-    hero: '/assets/images/gallery/ground-support-truss.jpg',
+    hero: '/images/IMG_2529.jpg',
     intro: 'AV-TEC\'s structural department provides certified aluminum trussing, goal posts, box truss, scaffolding, and lighting stands for events of all sizes.',
     subServices: [
       {

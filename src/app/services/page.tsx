@@ -49,7 +49,7 @@ export default function ServicesPage() {
         eyebrow="Our Services"
         title="Practical AV Support for Real Events"
         subtitle="From sound reinforcement to stage lighting, video walls to rigging — end-to-end technical solutions backed by 30+ years of experience."
-        bg="/assets/images/gallery/concert-lighting-rig.jpg"
+        bg="/images/IMG_4064.JPG.jpeg"
       />
       <section className="section">
         {DIVISIONS.map((div) => (
