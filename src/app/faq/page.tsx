@@ -79,6 +79,7 @@ export default function FAQPage() {
         eyebrow="Help & Knowledge"
         title="Frequently Asked Questions"
         subtitle="Clear answers about our AV equipment rental, event technical support, setup lead times, and service coverage across India."
+        bg="/images/IMG_2653.jpg"
       />
 
       <section className="section">
