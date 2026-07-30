@@ -100,10 +100,10 @@ export const CASE_STUDIES: CaseStudy[] = [
     equipment: ['Prolyte H40V Roof Grid', 'CM Lodestar Hoists', 'Ground Support Truss', 'Clay Paky Sharpy'],
     audience: '600',
     duration: '2 days',
-    heroImage: '/assets/images/gallery/wedding-stage-wash.jpg',
+    heroImage: '/images/IMG_2529.jpg',
     images: [
-      '/assets/images/gallery/wedding-stage-wash.jpg',
-      '/assets/images/gallery/festival-night-show.jpg',
+      '/images/IMG_2529.jpg',
+      '/images/IMG_6544.jpg',
     ],
     challenge: 'Construct a certified ground-support trussing structure and roof grid for an outdoor venue with real-time load monitoring.',
     solution: 'Engineered Prolyte H40V truss grid hoisted by CM Lodestar motors, featuring Broadweigh load cells and integrated lighting hangs.',

@@ -136,19 +136,21 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
 
   return (
     <div className="gallery-explorer">
-      <div className="gx-filterbar" role="tablist" aria-label="Filter gallery">
-        {TABS.map((t) => (
-          <button
-            key={t.key}
-            type="button"
-            role="tab"
-            aria-selected={filter === t.key}
-            className={`gx-tab ${filter === t.key ? 'is-active' : ''}`}
-            onClick={() => onSelectFilter(t.key)}
-          >
-            {t.label}
-          </button>
-        ))}
+      <div className="gx-filterbar-wrapper">
+        <div className="gx-filterbar" role="tablist" aria-label="Filter gallery">
+          {TABS.map((t) => (
+            <button
+              key={t.key}
+              type="button"
+              role="tab"
+              aria-selected={filter === t.key}
+              className={`gx-tab ${filter === t.key ? 'is-active' : ''}`}
+              onClick={() => onSelectFilter(t.key)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {filteredItems.length === 0 ? (
