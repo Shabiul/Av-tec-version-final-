@@ -56,10 +56,8 @@ dev.log
 
 # local assets / large files
 assets/A V TEC VIDEOS AND IMAGES/
-# Videos are tracked via Git LFS (see .gitattributes)
 public/icons/
-
-# broken Git LFS pointer stubs with no real content locally (see AGENTS.md history)
 public/assets/videos/
+public/videos/
 
 .vercel

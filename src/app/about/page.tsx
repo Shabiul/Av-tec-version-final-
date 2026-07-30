@@ -64,7 +64,7 @@ export default function AboutPage() {
         title="Audio Visual & Event Technology Since 1992"
         subtitle="Three decades of dependable sound, light, video and technical support — from a single boardroom to a 50,000-strong festival."
         bg="/assets/images/gallery/foh-control-position.jpg"
-        bgVideo="/assets/videos/gallery/why-avtec.mp4"
+        bgVideo="https://y7qdpgw8oz5b5h2o.public.blob.vercel-storage.com/videos/VID-20240109-WA0001.mp4"
       />
 
       {/* ═══ STORY ═══ */}
