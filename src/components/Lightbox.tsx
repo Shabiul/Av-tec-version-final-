@@ -124,11 +124,12 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
                 <motion.video
                   key={item.src}
                   className="lightbox-video"
-                  poster={item.poster}
+                  src={encodeURI(item.src)}
+                  poster={item.poster || item.src.replace(/\.(mp4|MP4|mov|MOV|webm)$/i, '.jpg')}
                   controls
                   autoPlay
-                  preload="metadata"
                   playsInline
+                  preload="auto"
                   initial={{ opacity: 0, scale: 0.94, y: 8 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.96 }}
