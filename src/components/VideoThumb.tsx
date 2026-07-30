@@ -4,20 +4,24 @@ import { useState, useEffect, useRef } from 'react';
 
 interface VideoThumbProps {
   src: string;
+  poster?: string;
   alt?: string;
   rotate?: number;
 }
 
 /**
- * Performant, resilient video thumbnail generator.
- * Uses IntersectionObserver so <video> elements only fetch metadata when
- * scrolled near the viewport (prevents browser media connection choking).
- * Ensures background is always dark cinematic (#091220) to eliminate white box glitches.
+ * Resilient, fast video thumbnail component.
+ * Loads a JPEG poster image first (same path as video with .jpg extension),
+ * eliminating browser media connection limits and blank box glitches.
+ * Falls back to HTML5 <video> with #t=0.5 if no JPEG poster is found.
  */
-export default function VideoThumb({ src, alt, rotate }: VideoThumbProps) {
+export default function VideoThumb({ src, poster, alt, rotate }: VideoThumbProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [useFallbackVideo, setUseFallbackVideo] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-derive poster path if not explicitly provided
+  const derivedPoster = poster || src.replace(/\.(mp4|MP4|mov|MOV|webm)$/i, '.jpg');
 
   useEffect(() => {
     const el = containerRef.current;
@@ -54,25 +58,42 @@ export default function VideoThumb({ src, alt, rotate }: VideoThumbProps) {
         overflow: 'hidden',
       }}
     >
-      {isVisible && !hasError && (
-        <video
-          preload="metadata"
-          muted
-          playsInline
-          aria-label={alt}
-          onError={() => setHasError(true)}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            display: 'block',
-            pointerEvents: 'none',
-            background: '#091220',
-            transform: rotate ? `rotate(${rotate}deg) scale(1.78)` : undefined,
-          }}
-        >
-          <source src={`${encodeURI(src)}#t=0.5`} type={src.toLowerCase().endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} />
-        </video>
+      {isVisible && (
+        !useFallbackVideo ? (
+          <img
+            src={derivedPoster}
+            alt={alt || 'Video preview'}
+            loading="lazy"
+            onError={() => setUseFallbackVideo(true)}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+              pointerEvents: 'none',
+              background: '#091220',
+              transform: rotate ? `rotate(${rotate}deg) scale(1.78)` : undefined,
+            }}
+          />
+        ) : (
+          <video
+            preload="metadata"
+            muted
+            playsInline
+            aria-label={alt}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+              pointerEvents: 'none',
+              background: '#091220',
+              transform: rotate ? `rotate(${rotate}deg) scale(1.78)` : undefined,
+            }}
+          >
+            <source src={`${encodeURI(src)}#t=0.5`} type={src.toLowerCase().endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} />
+          </video>
+        )
       )}
     </div>
   );

@@ -170,7 +170,7 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
                 aria-label={`${item.kind === 'video' ? 'Play' : 'View'} ${item.title}`}
               >
                 {item.kind === 'video' ? (
-                  <VideoThumb src={item.src} alt={item.title} rotate={item.rotate} />
+                  <VideoThumb src={item.src} poster={item.poster} alt={item.title} rotate={item.rotate} />
                 ) : (
                   <img src={item.thumb} alt={item.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transform: item.rotate ? `rotate(${item.rotate}deg) scale(1.78)` : undefined }} />
                 )}
