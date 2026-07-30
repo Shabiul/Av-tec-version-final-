@@ -15,6 +15,7 @@ export const EVENT_TYPES = [
 export interface EnquiryInput {
   name?: string;
   company?: string;
+  designation?: string;
   email?: string;
   setup_date?: string;
   date?: string;
@@ -28,6 +29,7 @@ export interface EnquiryInput {
 export interface EnquiryNormalized {
   name: string;
   company: string;
+  designation: string;
   email: string;
   setup_date: string;
   date: string;
@@ -85,6 +87,9 @@ export function validateEnquiry(input: EnquiryInput): EnquiryResult {
   const company = (input.company ?? '').trim();
   if (company.length > 150) errors.company = 'Company name is too long.';
 
+  const designation = (input.designation ?? '').trim();
+  if (designation.length > 100) errors.designation = 'Designation is too long.';
+
   const email = (input.email ?? '').trim().toLowerCase();
   if (!email) errors.email = 'Enter a valid email address.';
   else if (email.length > 254 || !EMAIL_RE.test(email)) errors.email = 'Enter a valid email address.';
@@ -129,6 +134,7 @@ export function validateEnquiry(input: EnquiryInput): EnquiryResult {
   const normalized: EnquiryNormalized = {
     name,
     company,
+    designation,
     email,
     setup_date,
     date,

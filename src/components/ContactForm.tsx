@@ -33,6 +33,7 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
     const raw = {
       name: String(data.get('name') ?? ''),
       company: String(data.get('company') ?? ''),
+      designation: String(data.get('designation') ?? ''),
       email: String(data.get('email') ?? ''),
       setup_date: String(data.get('setup_date') ?? ''),
       date: String(data.get('date') ?? ''),
@@ -148,6 +149,22 @@ export default function ContactForm({ subject = 'New AV-TEC Enquiry' }: ContactF
           {errors.company && (
             <span className="field-error" id="err-company" role="alert">
               {errors.company}
+            </span>
+          )}
+        </label>
+        <label htmlFor="cf-designation">
+          <span className="label-title">Designation</span>
+          <input
+            id="cf-designation"
+            name="designation"
+            placeholder="e.g. Event Director, Manager"
+            autoComplete="organization-title"
+            aria-invalid={!!errors.designation}
+            aria-describedby={errors.designation ? 'err-designation' : undefined}
+          />
+          {errors.designation && (
+            <span className="field-error" id="err-designation" role="alert">
+              {errors.designation}
             </span>
           )}
         </label>

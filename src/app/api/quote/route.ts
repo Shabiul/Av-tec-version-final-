@@ -17,6 +17,7 @@ export async function POST(request: NextRequest) {
   const { errors, normalized } = validateEnquiry({
     name: String(body.name ?? ''),
     company: String(body.company ?? ''),
+    designation: String(body.designation ?? ''),
     email: String(body.email ?? ''),
     date: String(body.date ?? ''),
     event_type: String(body.event_type ?? ''),
@@ -62,6 +63,7 @@ export async function POST(request: NextRequest) {
           timestamp: new Date().toISOString(),
           name: normalized.name,
           company: normalized.company,
+          designation: normalized.designation,
           email: normalized.email,
           date: normalized.date,
           event_type: normalized.event_type,

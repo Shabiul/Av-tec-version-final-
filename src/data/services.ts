@@ -208,7 +208,7 @@ export const SERVICES: Record<string, Service> = {
   consultancy: {
     slug: 'consultancy',
     title: 'Tech Consultancy',
-    hero: '/assets/images/gallery/foh-control-position.jpg',
+    hero: '/images/IMG_3842.jpg',
     intro: 'AV-TEC\'s consultancy division brings three decades of technical expertise to your planning table — specifying mixers, media servers, wireless comms, matrix switchers, and show control setups.',
     subServices: [
       {
@@ -255,7 +255,7 @@ export const SERVICES: Record<string, Service> = {
   installations: {
     slug: 'installations',
     title: 'Installs & Integrations',
-    hero: '/assets/images/gallery/auditorium-install.jpg',
+    hero: '/images/IMG_3636.jpg',
     intro: 'AV-TEC\'s installation division designs and delivers permanent AV solutions — including fine-pitch indoor LED walls, smart display TVs, digital conference microphones, and LED video processors.',
     subServices: [
       {
