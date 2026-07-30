@@ -208,7 +208,7 @@ export const SERVICES: Record<string, Service> = {
   consultancy: {
     slug: 'consultancy',
     title: 'Tech Consultancy',
-    hero: '/images/IMG_3842.jpg',
+    hero: '/images/IMG_6485.jpg',
     intro: 'AV-TEC\'s consultancy division brings three decades of technical expertise to your planning table — specifying mixers, media servers, wireless comms, matrix switchers, and show control setups.',
     subServices: [
       {
