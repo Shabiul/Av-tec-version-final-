@@ -5,6 +5,7 @@ export interface GalleryImage {
   equipment: string;
   venue?: string;
   project?: string;
+  rotate?: number;
 }
 
 export interface GalleryVideo {
@@ -15,6 +16,7 @@ export interface GalleryVideo {
   equipment: string;
   venue?: string;
   duration?: string;
+  rotate?: number;
 }
 
 /* ============================================================
@@ -63,7 +65,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   { src: '/assets/images/gallery/IMG_6588.jpg', title: 'Signal Distribution Distribution', service: 'Tech Consultancy', equipment: 'Signal Distribution', venue: 'Technical Setup' },
   { src: '/assets/images/gallery/IMG_6589.jpg', title: 'Server & Processor Rack', service: 'Installs & Integrations', equipment: 'Equipment Rack', venue: 'Installation' },
   { src: '/assets/images/gallery/IMG_6590.jpg', title: 'Master Console Interface', service: 'Tech Consultancy', equipment: 'Control System', venue: 'Technical' },
-  { src: '/assets/images/gallery/IMG_7323.jpg', title: 'Stage Ambience Wash', service: 'Stage Lighting', equipment: 'Wash Fixtures', venue: 'Event' },
+  { src: '/assets/images/gallery/IMG_7323.jpg', title: 'Stage Ambience Wash', service: 'Stage Lighting', equipment: 'Wash Fixtures', venue: 'Event', rotate: -90 },
   { src: '/assets/images/gallery/IMG_7388.PNG', title: 'System Schematic Diagram', service: 'Tech Consultancy', equipment: 'System Design', venue: 'Planning' },
 ];
 
@@ -96,6 +98,6 @@ export const GALLERY_VIDEOS: GalleryVideo[] = [
   { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220715_101545.mp4', title: 'Rigging Safety & Load Inspection', service: 'Trussing & Rigging', equipment: 'Rigging Hardware', duration: '3:15' },
   { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220806_072641.mp4', title: 'Outdoor Screen Sunrise Test', service: 'Video & LED Walls', equipment: 'Outdoor P3.9 LED', duration: '2:10' },
   { src: '/A V TEC VIDEOS AND IMAGES copy/VID_20220806_072719.mp4', title: 'Stage Sound System Power-Up', service: 'Audio Systems', equipment: 'Power Amplifiers & Subs', duration: '2:40' },
-  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_236470801_043607_994.mp4', title: 'Stage Light Chase Pattern Test', service: 'Stage Lighting', equipment: 'Moving Head Fixtures', duration: '1:25' },
+  { src: '/A V TEC VIDEOS AND IMAGES copy/VID_236470801_043607_994.mp4', title: 'Stage Light Chase Pattern Test', service: 'Stage Lighting', equipment: 'Moving Head Fixtures', duration: '1:25', rotate: -90 },
   { src: '/A V TEC VIDEOS AND IMAGES copy/VID_241460317_020746_261.mp4', title: 'LED Video Processor Signal Check', service: 'Video & LED Walls', equipment: 'Video Processor', duration: '1:30' }
 ];

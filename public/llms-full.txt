@@ -1,0 +1,47 @@
+# AV-TEC India — Full Technical Specifications & Company Knowledge Base
+
+## Overview
+AV-TEC is a leading Audio Visual, Stage Lighting, Video Wall, and Event Technology provider headquartered in Bengaluru, Karnataka, India. Founded in 1992, AV-TEC has executed over 5,000+ live shows, international conventions, arena concerts, corporate summits, and high-end venue integrations across India.
+
+## Detailed Service Catalog
+
+### 1. Audio Systems Engineering
+- **Line Array Systems**: D&B Audiotechnik GSL & Q Series, Martin Audio W8LM line arrays, WS218X subwoofers, D&B SL-SUBS.
+- **Digital Consoles**: Avid VENUE SC48 (48-channel), DiGiCo SD12 / SD7, Midas M32, Allen & Heath SQ7, Yamaha DM3 Digital 16ch mixer with Dante stage racks.
+- **RF Microphones & Monitoring**: Shure QLXD & Axient Digital wireless handhelds/lapels, Sennheiser EW500 series, Sennheiser IEM G4/G3 wireless in-ear monitors.
+- **Conference & Intercom**: OSL Digital Conference Microphones, translation/interpretation booths, Clear-Com wireless intercom systems (8x2 sets).
+
+### 2. Stage Lighting & Visual Effects
+- **Fixtures**: Robe MegaPointe beam/spot/wash, Clay Paky Sharpy moving heads, Astera AX1 Wireless Pixel Tubes, Martin MAC Viper, LED washes & blinders.
+- **Control Consoles**: MA Lighting grandMA3 / grandMA2, Avolites Arena, Avolites Tiger Touch II.
+- **Effects**: Hazers, low-fog generators, CO2 jets, sparkulars.
+
+### 3. Video & LED Screen Displays
+- **Indoor LED**: P2.6 Ultra-Fine Pitch Indoor LED Wall (4K resolution support, high refresh rate).
+- **Outdoor LED**: P6 High-Brightness Outdoor LED Screen (IP65 weather-rated).
+- **Video Switchers & Processors**: Blackmagic Design ATEM 4K switchers, Novastar VX600/VX1000 processors, Disguise media servers, Roland V-60HD.
+
+### 4. Trussing, Rigging & Structural Engineering
+- **Truss Systems**: Prolyte H40V & H30V heavy-duty aluminum trusses, ground-support towers, outdoor roof structures.
+- **Rigging Hoists**: CM Lodestar 1-ton and 2-ton electric chain hoists, motor controllers, Broadweigh wireless load cells.
+
+### 5. Tech Consultancy & Venue Integrations
+- System architecture for auditoriums, corporate boardrooms, places of worship, broadcast rooms. Crestron, QSC Q-SYS, Extron integration expertise.
+
+## Frequently Asked Questions (FAQ)
+
+### What regions does AV-TEC cover?
+AV-TEC is based in Bengaluru, Karnataka, India, and provides technical production across Bengaluru, Chennai, Hyderabad, Mumbai, Goa, Delhi NCR, and all major Indian hubs.
+
+### How quickly can AV-TEC deploy gear for an event?
+With 24/7 warehouse operations and an internal transport fleet in Bengaluru, emergency and short-notice setups can be deployed within 4–6 hours.
+
+### Does AV-TEC provide certified audio and lighting engineers?
+Yes. Every rental includes senior system engineers, FOH audio mixing engineers, lighting programmers, and certified riggers.
+
+## Contact Information
+- **Company Name**: AV-TEC Audio Visual & Event Technology
+- **Phone**: +91 79757 84962
+- **Email**: ilangovan@avtecindia.com, balaji@avtecindia.com
+- **Website**: https://www.avtecindia.com
+- **Location**: Bengaluru, Karnataka 560001, India

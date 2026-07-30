@@ -36,6 +36,19 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
     equipment: '',
   }));
 
+  const creativeWorkJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: c.title,
+    headline: c.title,
+    description: c.challenge,
+    image: c.heroImage ? `https://www.avtecindia.com${c.heroImage}` : undefined,
+    author: { '@type': 'Organization', name: 'AV-TEC', url: 'https://www.avtecindia.com' },
+    publisher: { '@type': 'Organization', name: 'AV-TEC', url: 'https://www.avtecindia.com' },
+    locationCreated: { '@type': 'Place', name: c.city },
+    datePublished: c.date,
+  };
+
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -48,6 +61,10 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
 
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -94,11 +111,22 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
       {/* ═══ TESTIMONIAL ═══ */}
       {c.testimonial && (
         <section className="section client-feedback-section">
-          <div className="testimonial-content">
-            <span className="eyebrow">Client Feedback</span>
-            <p className="testimonial-quote">&ldquo;{c.testimonial.quote}&rdquo;</p>
-            <p className="testimonial-name">{c.testimonial.name}</p>
-            <p className="testimonial-role">{c.testimonial.role}</p>
+          <div className="section-center">
+            <h2 className="testimonials-heading">CLIENT FEEDBACK</h2>
+          </div>
+          <div className="testimonials-single-wrap">
+            <div className="testimonial-single-card">
+              <p className="testimonial-client-quote">&ldquo;{c.testimonial.quote}&rdquo;</p>
+              <div className="testimonial-client-meta">
+                <div className="testimonial-client-avatar">
+                  {c.testimonial.name.split(' ').map((n) => n[0]).join('').slice(0, 2).toUpperCase()}
+                </div>
+                <div className="testimonial-client-author">
+                  <p className="testimonial-client-name">{c.testimonial.name}</p>
+                  <p className="testimonial-client-role">{c.testimonial.role}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       )}

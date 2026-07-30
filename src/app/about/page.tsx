@@ -29,7 +29,16 @@ const DIVISIONS = [
 ];
 
 const DIFFERENTIATORS = [
-  { title: 'Marquee Inventory', desc: 'D&b audiotechnik, Martin Audio, Avid, Allen&heath, Shure, Sennheiser, Electro Voice, Oliver system limited, Teleprompter, Quiz buzzer, Clear Comms units' },
+  {
+    title: 'Marquee Inventory',
+    desc: (
+      <>
+        D&amp;b audiotechnik, Martin Audio, Avid, Allen&amp;heath, Shure, Sennheiser,{' '}
+        <span style={{ whiteSpace: 'nowrap' }}>Electro-Voice</span>, Oliver system limited, Teleprompter, Quiz buzzer,{' '}
+        <span style={{ whiteSpace: 'nowrap' }}>Clear Comms units</span>
+      </>
+    ),
+  },
   { title: 'Steady Technical Crew', desc: 'Certified engineers and riggers who plan ahead and stay calm under show pressure.' },
   { title: 'Straightforward Advice', desc: 'We recommend the right solution for your event and budget — no overselling.' },
 ];
@@ -86,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ STATS ═══ */}
-      <section className="section">
+      <section className="section" style={{ paddingTop: '8px', paddingBottom: '8px' }}>
         <div className="stat-band">
           {STATS.map((s) => (
             <div className="stat" key={s.label}>

@@ -20,12 +20,12 @@ const playfair = Playfair_Display({
 
 const SITE_URL = "https://www.avtecindia.com";
 const DESCRIPTION =
-  "AV-TEC provides audio, lighting, video, trussing, and event technical services in Bengaluru, India, since 1992. View services, gallery, and rentals.";
+  "AV-TEC is India's leading AV solutions & event technology company based in Bengaluru since 1992. Professional audio line arrays, stage lighting, fine pitch LED walls, trussing rigging & corporate AV equipment rentals.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "AV-TEC | Audio Visual & Event Technology, Bengaluru",
+    default: "AV-TEC | Audio Visual Solutions & Event Technology Bengaluru India",
     template: "%s | AV-TEC India",
   },
   description: DESCRIPTION,
@@ -38,19 +38,36 @@ export const metadata: Metadata = {
     "avtecindia.com",
     "www.avtecindia.com",
     "AV-TEC Audio Visual",
-    "audio visual company India",
-    "event technology Bengaluru",
+    "audio visual solutions Bengaluru",
+    "best AV company Bengaluru",
+    "audio visual equipment rental Bangalore",
+    "event technology company India",
     "sound system rental Bengaluru",
+    "D&B line array hire Bangalore",
     "stage lighting rental India",
     "LED video wall rental Bengaluru",
+    "P2.6 LED display hire India",
     "event production company India",
-    "AV equipment rental India",
-    "conference AV services Bengaluru",
+    "trussing and rigging rental Bengaluru",
+    "corporate AV services Bengaluru",
+    "conference AV solutions India",
+    "AV equipment distribution India",
+    "auditorium AV installation Bengaluru",
   ],
-  authors: [{ name: "AV-TEC" }],
-  creator: "AV-TEC",
-  publisher: "AV-TEC",
-  robots: { index: true, follow: true },
+  authors: [{ name: "AV-TEC India" }],
+  creator: "AV-TEC India",
+  publisher: "AV-TEC India",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
     canonical: "/",
     languages: {
@@ -59,7 +76,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification-id",
   },
   manifest: "/site.webmanifest",
   icons: {
@@ -75,14 +92,14 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "AV-TEC India",
-    title: "AV-TEC | Audio Visual & Event Technology, Bengaluru",
+    title: "AV-TEC | Audio Visual Solutions & Event Technology Bengaluru India",
     description: DESCRIPTION,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AV-TEC India" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AV-TEC India Audio Visual Solutions" }],
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AV-TEC | Audio Visual & Event Technology, Bengaluru",
+    title: "AV-TEC | Audio Visual Solutions & Event Technology Bengaluru India",
     description: DESCRIPTION,
     images: ["/og-image.png"],
   },
@@ -90,49 +107,93 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": `${SITE_URL}/#organization`,
-  name: "AV-TEC",
-  alternateName: [
-    "AV TEC",
-    "AV-TEC India",
-    "AV TEC India",
-    "avtecindia",
-    "avtecindia.com",
-    "AV-TEC Audio Visual & Event Technology"
-  ],
-  url: SITE_URL,
-  logo: `${SITE_URL}/assets/images/logos/logo-web.png`,
-  image: `${SITE_URL}/og-image.png`,
-  description: DESCRIPTION,
-  foundingDate: "1992",
-  telephone: "+91 79757 84962",
-  email: ["ilangovan@avtecindia.com", "balaji@avtecindia.com"],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Bengaluru",
-    addressRegion: "Karnataka",
-    addressCountry: "IN",
-  },
-  hasMap: "https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784",
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 12.9868205,
-    longitude: 77.5990784
-  },
-  areaServed: "IN",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "8",
-    bestRating: "5",
-    worstRating: "1"
-  },
-  sameAs: [
-    "https://www.avtecindia.com",
-    "https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784",
-    "https://github.com/Shabiul/Av-tec-version-final-"
-  ],
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService", "AudioVisualEquipmentRentalService"],
+      "@id": `${SITE_URL}/#organization`,
+      name: "AV-TEC",
+      alternateName: [
+        "AV TEC",
+        "AV-TEC India",
+        "AV TEC India",
+        "avtecindia",
+        "avtecindia.com",
+        "AV-TEC Audio Visual & Event Technology"
+      ],
+      url: SITE_URL,
+      logo: `${SITE_URL}/assets/images/logos/logo-web.png`,
+      image: `${SITE_URL}/og-image.png`,
+      description: DESCRIPTION,
+      foundingDate: "1992",
+      telephone: "+91 79757 84962",
+      email: ["ilangovan@avtecindia.com", "balaji@avtecindia.com"],
+      priceRange: "₹₹₹",
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59"
+        }
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Bengaluru City",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560001",
+        addressCountry: "IN",
+      },
+      hasMap: "https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 12.9868205,
+        longitude: 77.5990784
+      },
+      areaServed: [
+        { "@type": "City", name: "Bengaluru" },
+        { "@type": "City", name: "Bangalore" },
+        { "@type": "State", name: "Karnataka" },
+        { "@type": "Country", name: "India" }
+      ],
+      knowsAbout: [
+        "Audio Visual Solutions",
+        "D&B Line Array Sound Reinforcement",
+        "Stage Lighting & Beam Moving Heads",
+        "Fine Pitch P2.6 LED Video Walls",
+        "Prolyte Roof & Truss Rigging Systems",
+        "Corporate Conference Technical Production",
+        "Auditorium & Boardroom AV Integrations"
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        reviewCount: "8",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      sameAs: [
+        "https://www.avtecindia.com",
+        "https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784",
+        "https://github.com/Shabiul/Av-tec-version-final-"
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "AV-TEC India",
+      description: DESCRIPTION,
+      publisher: {
+        "@id": `${SITE_URL}/#organization`
+      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${SITE_URL}/rental?search={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
 };
 
 const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})()`;

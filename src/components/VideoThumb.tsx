@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 interface VideoThumbProps {
   src: string;
   alt?: string;
+  rotate?: number;
 }
 
 /**
@@ -13,7 +14,7 @@ interface VideoThumbProps {
  * scrolled near the viewport (prevents browser media connection choking).
  * Ensures background is always dark cinematic (#091220) to eliminate white box glitches.
  */
-export default function VideoThumb({ src, alt }: VideoThumbProps) {
+export default function VideoThumb({ src, alt, rotate }: VideoThumbProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [hasError, setHasError] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -68,6 +69,7 @@ export default function VideoThumb({ src, alt }: VideoThumbProps) {
             display: 'block',
             pointerEvents: 'none',
             background: '#091220',
+            transform: rotate ? `rotate(${rotate}deg) scale(1.78)` : undefined,
           }}
         />
       )}

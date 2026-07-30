@@ -22,6 +22,7 @@ interface GxItem {
   service: string;  // category label (ready for a future category filter)
   meta: string;     // "equipment · venue"
   poster?: string;  // video only, forwarded to the Lightbox
+  rotate?: number;
 }
 
 const joinMeta = (...parts: (string | undefined)[]) => parts.filter(Boolean).join(' · ');
@@ -71,6 +72,7 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
       title: im.title,
       service: im.service,
       meta: joinMeta(im.equipment, im.venue),
+      rotate: im.rotate,
     }));
     const clips: GxItem[] = videos.map((v) => ({
       kind: 'video',
@@ -80,6 +82,7 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
       service: v.service,
       meta: joinMeta(v.equipment, v.venue),
       poster: v.poster,
+      rotate: v.rotate,
     }));
     return [...photos, ...clips];
   }, [images, videos]);
@@ -102,6 +105,7 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
         title: i.title,
         tag: i.service,
         meta: i.meta,
+        rotate: i.rotate,
       })),
     [filteredItems],
   );
@@ -166,9 +170,9 @@ export default function GalleryExplorer({ images, videos }: GalleryExplorerProps
                 aria-label={`${item.kind === 'video' ? 'Play' : 'View'} ${item.title}`}
               >
                 {item.kind === 'video' ? (
-                  <VideoThumb src={item.src} alt={item.title} />
+                  <VideoThumb src={item.src} alt={item.title} rotate={item.rotate} />
                 ) : (
-                  <img src={item.thumb} alt={item.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={item.thumb} alt={item.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transform: item.rotate ? `rotate(${item.rotate}deg) scale(1.78)` : undefined }} />
                 )}
                 {item.kind === 'video' && (
                   <span className="play-badge">

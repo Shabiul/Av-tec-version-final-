@@ -106,8 +106,7 @@ export default function WorkPage() {
 
       {/* ═══ CLIENT REVIEWS / TESTIMONIALS ═══ */}
       <section className="section testimonials-section">
-        <div className="section-bg"><img src="/assets/images/gallery/concert-lighting-rig.jpg" alt="AV-TEC event stage" aria-hidden="true" loading="lazy" /></div>
-        <TestimonialsSlider ctaLink="/contact" ctaText="GET A QUOTE" />
+        <TestimonialsSlider variant="card" ctaLink="/contact" ctaText="GET A QUOTE" />
       </section>
 
       {/* ═══ CTA ═══ */}

@@ -10,15 +10,6 @@ export interface Testimonial {
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    quote: "In the two installations I worked on, I had the pleasure of collaborating with Avtec, and I can highly recommend them. They are punctual and efficient, understand the processes thoroughly, and went above and beyond their responsibilities to ensure the overall concept worked seamlessly. They have an excellent overview of the whole project.",
-    name: "Firat SHADÉ",
-    role: "7 reviews · a year ago",
-    initials: "FS",
-    service: "installations",
-    rating: 5,
-    eventType: "AV Installation"
-  },
-  {
     quote: "Highly Professional and technically sound... Never met an event manager with such a performa and Brilliance in India.",
     name: "Ramesh M",
     role: "2 reviews · a year ago",
@@ -26,6 +17,42 @@ export const TESTIMONIALS: Testimonial[] = [
     service: "audio",
     rating: 5,
     eventType: "Event Production"
+  },
+  {
+    quote: "Nice",
+    name: "Varun M",
+    role: "14 reviews · 6 photos · 7 years ago",
+    initials: "VM",
+    service: "audio",
+    rating: 5,
+    eventType: "AV Services"
+  },
+  {
+    quote: "Great technical team, prompt setup, and smooth event execution throughout.",
+    name: "Md saleem",
+    role: "2 reviews · 2 years ago",
+    initials: "MS",
+    service: "audio",
+    rating: 5,
+    eventType: "Corporate Production"
+  },
+  {
+    quote: "Extremely reliable event managers and technical crew for corporate and private productions.",
+    name: "Shashi Ms",
+    role: "6 years ago",
+    initials: "SM",
+    service: "audio",
+    rating: 5,
+    eventType: "Corporate Event"
+  },
+  {
+    quote: "In the two installations I worked on, I had the pleasure of collaborating with Avtec, and I can highly recommend them. They are punctual and efficient, understand the processes thoroughly, and went above and beyond their responsibilities to ensure the overall concept worked seamlessly. They have an excellent overview of the whole project.",
+    name: "Firat SHADÉ",
+    role: "7 reviews · a year ago",
+    initials: "FS",
+    service: "installations",
+    rating: 5,
+    eventType: "AV Installation"
   },
   {
     quote: "Highly Professional and technically sound... Never met an event manager with such a performa and Brilliance in India. Highly recommended for all international events...",
@@ -46,15 +73,6 @@ export const TESTIMONIALS: Testimonial[] = [
     eventType: "City Events"
   },
   {
-    quote: "Nice",
-    name: "Varun M",
-    role: "14 reviews · 6 photos · 7 years ago",
-    initials: "VM",
-    service: "audio",
-    rating: 5,
-    eventType: "AV Services"
-  },
-  {
     quote: "Top-tier audio visual equipment and dependable technical support for live events and installations.",
     name: "Ilangovan D",
     role: "Local Guide · 2 reviews · 52 photos · a year ago",
@@ -73,15 +91,6 @@ export const TESTIMONIALS: Testimonial[] = [
     eventType: "Stage Lighting & Sound"
   },
   {
-    quote: "Great technical team, prompt setup, and smooth event execution throughout.",
-    name: "Md saleem",
-    role: "2 reviews · 2 years ago",
-    initials: "MS",
-    service: "audio",
-    rating: 5,
-    eventType: "Corporate Production"
-  },
-  {
     quote: "Professional team with world-class gear and hands-on event management expertise.",
     name: "Tushar S",
     role: "4 reviews · 3 photos · 3 years ago",
@@ -98,15 +107,6 @@ export const TESTIMONIALS: Testimonial[] = [
     service: "lighting",
     rating: 5,
     eventType: "Exhibition & Event"
-  },
-  {
-    quote: "Extremely reliable event managers and technical crew for corporate and private productions.",
-    name: "Shashi Ms",
-    role: "6 years ago",
-    initials: "SM",
-    service: "audio",
-    rating: 5,
-    eventType: "Corporate Event"
   },
   {
     quote: "High quality sound systems and flawless lighting setup for our grand event.",

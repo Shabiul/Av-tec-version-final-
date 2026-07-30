@@ -11,6 +11,7 @@ export interface LightboxItem {
   title: string;
   tag?: string;   // service / tool label
   meta?: string;  // secondary line (equipment · venue)
+  rotate?: number;
 }
 
 interface LightboxProps {
@@ -133,6 +134,7 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ transform: item.rotate ? `rotate(${item.rotate}deg)` : undefined, maxHeight: item.rotate ? '70vh' : undefined }}
                 />
               ) : (
                 <motion.img
@@ -143,6 +145,7 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ transform: item.rotate ? `rotate(${item.rotate}deg)` : undefined, maxHeight: item.rotate ? '70vh' : undefined }}
                 />
               )}
             </AnimatePresence>

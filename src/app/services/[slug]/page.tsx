@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import PageHero from '@/components/PageHero';
+import TestimonialsSlider from '@/components/TestimonialsSlider';
 import { SERVICES, SERVICE_LIST } from '@/data/services';
 import { TESTIMONIALS } from '@/data/testimonials';
 
@@ -118,23 +119,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       {/* ═══ REVIEWS ═══ */}
       {relatedTestimonials.length > 0 && (
         <section className="section panel-section">
-          <div className="section-center">
-            <h2 className="heading-crimson">What Our Clients Say</h2>
-          </div>
-          <div className="reviews-grid">
-            {relatedTestimonials.map((t) => (
-              <div className="review-card" key={t.name}>
-                <p className="review-quote">&ldquo;{t.quote}&rdquo;</p>
-                <div className="review-meta">
-                  <div className="review-avatar">{t.initials}</div>
-                  <div>
-                    <p className="review-name">{t.name}</p>
-                    <p className="review-role">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialsSlider variant="card" items={relatedTestimonials} showCta={false} />
         </section>
       )}
 

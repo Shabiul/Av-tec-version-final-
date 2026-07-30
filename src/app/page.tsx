@@ -117,7 +117,7 @@ export default function Home() {
       {/* ═══ TESTIMONIAL HIGHLIGHT ═══ */}
       <section className="section testimonials-section">
         <div className="section-bg"><img src="/assets/images/gallery/festival-night-show.jpg" alt="AV-TEC event stage" aria-hidden="true" loading="lazy" /></div>
-        <TestimonialsSlider />
+        <TestimonialsSlider variant="hero" />
       </section>
 
       {/* ═══ CTA BAND ═══ */}
