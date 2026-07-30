@@ -105,7 +105,7 @@ export default function WorkPage() {
       </section>
 
       {/* ═══ CLIENT REVIEWS / TESTIMONIALS ═══ */}
-      <section className="section testimonials-section">
+      <section className="section testimonials-card-section">
         <TestimonialsSlider variant="card" ctaLink="/contact" ctaText="GET A QUOTE" />
       </section>
 

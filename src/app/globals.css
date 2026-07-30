@@ -537,17 +537,20 @@ p { margin-top: 0; line-height: 1.6; }
 
 
 /* ===== TESTIMONIALS & CLIENT FEEDBACK ===== */
-/* ===== TESTIMONIALS & CLIENT FEEDBACK ===== */
-.testimonials-section {
+/* ===== TESTIMONIALS & CLIENT FEEDBACK (CARD VARIANT) ===== */
+.testimonials-card-section {
   position: relative;
   width: 100%;
-  min-height: 100vh !important;
-  height: 100vh !important;
-  padding: 120px 24px !important;
+  padding: 40px 24px 60px !important;
+  margin: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+  background: var(--bg-deep, #ffffff);
   overflow: hidden;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+}
+
+[data-theme="light"] .testimonials-card-section {
+  background: #ffffff !important;
 }
 
 .testimonials-section-inner {
