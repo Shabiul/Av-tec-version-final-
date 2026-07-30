@@ -133,7 +133,11 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-                  style={{ transform: item.rotate ? `rotate(${item.rotate}deg)` : undefined, maxHeight: item.rotate ? '70vh' : undefined }}
+                  style={{
+                    transform: item.rotate ? `rotate(${item.rotate}deg)` : undefined,
+                    maxHeight: '85vh',
+                    maxWidth: '90vw',
+                  }}
                 >
                   <source src={encodeURI(item.src)} type={item.src.toLowerCase().endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} />
                 </motion.video>
