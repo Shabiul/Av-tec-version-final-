@@ -40,7 +40,6 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   { src: '/assets/images/gallery/monitor-world.jpg', title: 'Monitor World', service: 'Audio Systems', equipment: 'Shure PSM1000', venue: 'Live Concert' },
   { src: '/assets/images/gallery/festival-night-show.jpg', title: 'Festival Night Show', service: 'Stage Lighting', equipment: 'Clay Paky Sharpy', venue: 'Music Festival' },
   { src: '/assets/images/gallery/outdoor-led-screen.jpg', title: 'Outdoor LED Screen', service: 'Video & LED Walls', equipment: 'P6 Outdoor LED', venue: 'Public Event' },
-  { src: '/assets/images/gallery/roof-rigging-build.jpg', title: 'Roof & Rigging Build', service: 'Trussing & Rigging', equipment: 'CM Lodestar Hoists', venue: 'Concert' },
   { src: '/assets/images/gallery/boardroom-av.jpg', title: 'Boardroom AV', service: 'Installs & Integrations', equipment: 'Poly Studio X', venue: 'Corporate Office' },
   { src: '/assets/images/gallery/stage-front-of-house.jpg', title: 'Stage Front-of-House', service: 'Audio Systems', equipment: 'D&B SL Subs', venue: 'Live Event' },
   { src: '/assets/images/gallery/dj-club-setup.jpg', title: 'DJ & Club Setup', service: 'Audio Systems', equipment: 'Pioneer / D&B', venue: 'Club Night' },
@@ -52,7 +51,6 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   { src: '/assets/images/gallery/IMG_2542.jpg', title: 'Corporate Stage AV', service: 'Installs & Integrations', equipment: 'Conference Room AV', venue: 'Corporate Office' },
   { src: '/assets/images/gallery/IMG_3070.jpg', title: 'Production Console View', service: 'Event Production', equipment: 'Stage & Lighting', venue: 'Live Show' },
   { src: '/assets/images/gallery/IMG_3077.jpg', title: 'Screen Display Setup', service: 'Video & LED Walls', equipment: 'LED Video Wall', venue: 'Product Launch' },
-  { src: '/assets/images/gallery/IMG_3131.jpg', title: 'Stage Lighting Wash', service: 'Stage Lighting', equipment: 'Moving Lights & Wash', venue: 'Concert' },
   { src: '/assets/images/gallery/IMG_3134.jpg', title: 'Sound Reinforcement', service: 'Audio Systems', equipment: 'Professional Audio', venue: 'Venue Install' },
   { src: '/assets/images/gallery/IMG_3202.jpg', title: 'Structural Rigging', service: 'Trussing & Rigging', equipment: 'Structural Rigging', venue: 'Event Setup' },
   { src: '/assets/images/gallery/IMG_3636.jpg', title: 'Fine Pitch LED Display', service: 'Video & LED Walls', equipment: 'Fine Pitch LED', venue: 'Indoor Event' },
@@ -60,13 +58,6 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   { src: '/assets/images/gallery/IMG_3833.jpg', title: 'Festival Arena View', service: 'Event Production', equipment: 'Full Production', venue: 'Music Festival' },
   { src: '/assets/images/gallery/IMG_4064.jpg', title: 'Corporate Keynote Rig', service: 'Installs & Integrations', equipment: 'Presentation Systems', venue: 'Corporate' },
   { src: '/assets/images/gallery/IMG_4350.jpg', title: 'FOH Sound Operations', service: 'Audio Systems', equipment: 'FOH & Monitor', venue: 'Live Concert' },
-  { src: '/assets/images/gallery/IMG_6586.jpg', title: 'AV Inventory Inspection', service: 'Sales & Distribution', equipment: 'AV Equipment', venue: 'Warehouse' },
-  { src: '/assets/images/gallery/IMG_6587.jpg', title: 'Gear Quality Check', service: 'Sales & Distribution', equipment: 'AV Gear Detail', venue: 'Inventory' },
-  { src: '/assets/images/gallery/IMG_6588.jpg', title: 'Signal Distribution Distribution', service: 'Tech Consultancy', equipment: 'Signal Distribution', venue: 'Technical Setup' },
-  { src: '/assets/images/gallery/IMG_6589.jpg', title: 'Server & Processor Rack', service: 'Installs & Integrations', equipment: 'Equipment Rack', venue: 'Installation' },
-  { src: '/assets/images/gallery/IMG_6590.jpg', title: 'Master Console Interface', service: 'Tech Consultancy', equipment: 'Control System', venue: 'Technical' },
-  { src: '/assets/images/gallery/IMG_7323.jpg', title: 'Stage Ambience Wash', service: 'Stage Lighting', equipment: 'Wash Fixtures', venue: 'Event', rotate: -90 },
-  { src: '/assets/images/gallery/IMG_7388.PNG', title: 'System Schematic Diagram', service: 'Tech Consultancy', equipment: 'System Design', venue: 'Planning' },
 ];
 
 export const GALLERY_VIDEOS: GalleryVideo[] = [

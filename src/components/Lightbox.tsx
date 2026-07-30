@@ -124,7 +124,6 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
                 <motion.video
                   key={item.src}
                   className="lightbox-video"
-                  src={encodeURI(item.src)}
                   poster={item.poster}
                   controls
                   autoPlay
@@ -135,7 +134,9 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
                   style={{ transform: item.rotate ? `rotate(${item.rotate}deg)` : undefined, maxHeight: item.rotate ? '70vh' : undefined }}
-                />
+                >
+                  <source src={encodeURI(item.src)} type={item.src.toLowerCase().endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} />
+                </motion.video>
               ) : (
                 <motion.img
                   key={item.src}

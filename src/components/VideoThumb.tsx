@@ -56,7 +56,6 @@ export default function VideoThumb({ src, alt, rotate }: VideoThumbProps) {
     >
       {isVisible && !hasError && (
         <video
-          src={`${encodeURI(src)}#t=0.5`}
           preload="metadata"
           muted
           playsInline
@@ -71,7 +70,9 @@ export default function VideoThumb({ src, alt, rotate }: VideoThumbProps) {
             background: '#091220',
             transform: rotate ? `rotate(${rotate}deg) scale(1.78)` : undefined,
           }}
-        />
+        >
+          <source src={`${encodeURI(src)}#t=0.5`} type={src.toLowerCase().endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} />
+        </video>
       )}
     </div>
   );
