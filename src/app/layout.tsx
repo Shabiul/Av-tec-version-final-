@@ -156,6 +156,34 @@ const organizationJsonLd = {
         { "@type": "State", name: "Karnataka" },
         { "@type": "Country", name: "India" }
       ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-7975784962",
+          contactType: "customer service",
+          email: "ilangovan@avtecindia.com",
+          availableLanguage: ["English", "Hindi", "Kannada", "Tamil"]
+        },
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-7975784962",
+          contactType: "sales & rentals",
+          email: "balaji@avtecindia.com",
+          availableLanguage: ["English", "Hindi", "Kannada"]
+        }
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Audio Visual & Event Technology Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pro Audio Line Array Sound Systems" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Stage Lighting & Moving Head Fixtures" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "P2.6 / P3.9 Fine Pitch LED Video Walls" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Aluminium Trussing & Roof Rigging Systems" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Turnkey Event Technical Production" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Auditorium & Boardroom AV Integrations" } }
+        ]
+      },
       knowsAbout: [
         "Audio Visual Solutions",
         "D&B Line Array Sound Reinforcement",
@@ -174,8 +202,7 @@ const organizationJsonLd = {
       },
       sameAs: [
         "https://www.avtecindia.com",
-        "https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784",
-        "https://github.com/Shabiul/Av-tec-version-final-"
+        "https://www.google.com/maps/place/AV-TEC/@12.9868205,77.5990784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae167ace1b6c7d:0x19c0a8b850319ad3!8m2!3d12.9868205!4d77.5990784"
       ],
     },
     {

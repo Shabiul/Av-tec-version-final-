@@ -38,12 +38,25 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const itemPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemPage',
+  name: 'Audio Visual & Event Technology Services',
+  description: 'AV-TEC offers audio, lighting, video, trussing, consultancy, and installation services for events in Bengaluru and across India.',
+  url: 'https://www.avtecindia.com/services',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'AV-TEC',
+    url: 'https://www.avtecindia.com',
+  },
+};
+
 export default function ServicesPage() {
   return (
     <div className="page-wrapper">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbJsonLd, itemPageJsonLd]) }}
       />
       <PageHero
         eyebrow="Our Services"

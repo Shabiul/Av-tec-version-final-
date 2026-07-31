@@ -57,6 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/terms`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
   ];
 
   // Dynamic Service Detail Pages

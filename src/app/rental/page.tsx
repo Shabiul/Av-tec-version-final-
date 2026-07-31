@@ -32,12 +32,46 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const offerCatalogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  name: 'AV-TEC Audio Visual Equipment Rental Catalog',
+  url: 'https://www.avtecindia.com/rental',
+  numberOfItems: 3,
+  itemListElement: [
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Sound Systems & Line Array Rental',
+        description: 'D&B audiotechnik, Martin Audio line arrays, digital mixing consoles & wireless mics.',
+      },
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Stage Lighting & Truss Rigging Rental',
+        description: 'Robe & Clay Paky moving head lights, Avolites control & Prolyte trussing.',
+      },
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Fine Pitch LED Video Wall Rental',
+        description: 'P2.6 Indoor and P6 Outdoor high-resolution LED screens with Novastar processors.',
+      },
+    },
+  ],
+};
+
 export default function RentalPage() {
   return (
     <div className="page-wrapper">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbJsonLd, offerCatalogJsonLd]) }}
       />
       <PageHero
         eyebrow="Rental"
