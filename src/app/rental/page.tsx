@@ -39,12 +39,11 @@ export default function RentalPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-<PageHero
+      <PageHero
         eyebrow="Rental"
         title="Equipment Rental & Event Production"
         subtitle="Professional sound, lighting, video and LED — delivered, set up and operated by experienced crew."
         bg="/assets/images/gallery/main-stage-line-array.jpg"
-        bgVideo="https://y7qdpgw8oz5b5h2o.public.blob.vercel-storage.com/videos/VID-20240505-WA0008.mp4"
       />
 
       {/* ═══ INQUIRY FORM ═══ */}

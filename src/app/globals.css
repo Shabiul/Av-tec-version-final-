@@ -1488,68 +1488,68 @@ p { margin-top: 0; line-height: 1.6; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 6px;
-  background: rgba(8, 18, 34, 0.85);
+  gap: 4px;
+  padding: 3px;
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 9999px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 .gx-tab {
-  padding: 12px 36px;
+  padding: 5px 18px;
   border-radius: 9999px;
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-  background: rgba(4, 10, 20, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.65);
+  background: transparent;
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  filter: brightness(0.85);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
+  position: relative;
+}
+.gx-tab::after {
+  display: none !important;
 }
 .gx-tab:hover {
   color: #ffffff;
-  background: rgba(18, 36, 64, 0.8);
-  border-color: rgba(232, 147, 12, 0.4);
-  filter: brightness(1);
-  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
 }
 .gx-tab.is-active {
   color: #ffffff !important;
-  background: linear-gradient(135deg, #e8930c 0%, #d48000 100%) !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
-  filter: brightness(1) !important;
-  box-shadow: 0 4px 24px rgba(232, 147, 12, 0.5), 0 0 14px rgba(232, 147, 12, 0.3) !important;
-  transform: scale(1.04);
+  background: #000000 !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+  transform: none !important;
+  text-shadow: none !important;
+}
+.gx-tab.is-active::after {
+  display: none !important;
 }
 [data-theme="light"] .gx-filterbar {
-  background: rgba(240, 244, 252, 0.92);
-  border-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  background: rgba(241, 245, 249, 0.9);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 [data-theme="light"] .gx-tab {
   color: #475569;
-  background: rgba(226, 232, 240, 0.7);
-  border-color: rgba(0, 0, 0, 0.06);
-  filter: brightness(0.92);
+  background: transparent;
+  border-color: transparent;
 }
 [data-theme="light"] .gx-tab:hover {
   color: #0f172a;
-  background: rgba(203, 213, 225, 0.9);
-  filter: brightness(1);
+  background: rgba(0, 0, 0, 0.06);
 }
 [data-theme="light"] .gx-tab.is-active {
   color: #ffffff !important;
-  background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 4px 20px rgba(217, 119, 6, 0.4) !important;
-  filter: brightness(1) !important;
+  background: #000000 !important;
+  border-color: #000000 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
 }
 /* ===== INNER SERVICE DETAIL PAGES STYLING (DARK & LIGHT MODE) ===== */
 .subservice-grid {
@@ -1781,40 +1781,7 @@ p { margin-top: 0; line-height: 1.6; }
   border-color: rgba(232, 147, 12, 0.3) !important;
 }
 
-.gx-tab {
-  border: 0; background: transparent; padding: 12px 8px 10px;
-  font-family: inherit;
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
-  font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--muted);
-  cursor: pointer;
-  position: relative;
-  transition: color 0.25s ease, text-shadow 0.25s ease;
-}
-.gx-tab::after {
-  content: ''; position: absolute; bottom: 0; left: 50%;
-  width: 0; height: 3px; background: var(--gold);
-  border-radius: 2px;
-  box-shadow: 0 0 12px var(--gold), 0 0 24px var(--gold);
-  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.gx-tab:hover {
-  color: var(--text);
-  text-shadow: 0 0 20px rgba(255,255,255,0.15);
-}
-.gx-tab:focus-visible {
-  outline: none;
-  color: var(--gold);
-}
-.gx-tab.is-active {
-  color: var(--gold);
-  text-shadow: 0 0 24px rgba(212,175,55,0.4);
-}
-.gx-tab.is-active::after {
-  width: 100%;
-  left: 0;
-}
-.gx-tab small { display: none; }
+
 
 /* Every tile is 16/9 so photos and videos align in the same grid. */
 .gx-tile {

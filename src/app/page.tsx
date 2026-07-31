@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { SERVICE_LIST } from '@/data/services';
 import { GALLERY_IMAGES } from '@/data/gallery';
 import { TESTIMONIALS } from '@/data/testimonials';
-import HeroVideo from '@/components/HeroVideo';
 import CountUp from '@/components/CountUp';
 import TestimonialsSlider from '@/components/TestimonialsSlider';
 
@@ -22,7 +21,7 @@ export default function Home() {
     <div>
       {/* ═══ HERO ═══ */}
       <section className="hero-section">
-        <HeroVideo src="https://y7qdpgw8oz5b5h2o.public.blob.vercel-storage.com/videos/VID-20240505-WA0008.mp4" poster="/assets/images/gallery/main-stage-line-array.jpg" />
+        <img src="/assets/images/gallery/main-stage-line-array.jpg" alt="AV-TEC main stage line array" aria-hidden="true" />
         <div className="hero-overlay" />
         <motion.div
           className="hero-content"
@@ -51,7 +50,7 @@ export default function Home() {
       {/* ═══ ABOUT TEASER ═══ */}
       <section className="section deep-section">
         <div className="section-bg" aria-hidden="true">
-          <HeroVideo src="https://y7qdpgw8oz5b5h2o.public.blob.vercel-storage.com/videos/IMG_6167.MP4" poster="/assets/images/gallery/foh-control-position.jpg" />
+          <img src="/assets/images/gallery/foh-control-position.jpg" alt="AV-TEC control position" aria-hidden="true" loading="lazy" />
         </div>
         <div className="section-center" style={{ maxWidth: '820px' }}>
           <span className="eyebrow" style={{ color: 'var(--orange)' }}>What we&apos;re all about</span>
