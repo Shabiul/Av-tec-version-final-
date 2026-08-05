@@ -156,18 +156,7 @@ export default function Lightbox({ items, index, onClose, onIndexChange }: Light
               )}
             </AnimatePresence>
 
-            <motion.div
-              className="lightbox-caption"
-              key={`cap-${item.src}`}
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.22, delay: 0.05 }}
-            >
-              <h3>{item.title}</h3>
-              {item.tag && <span className="cap-tag">{item.tag}</span>}
-              {item.meta && <p>{item.meta}</p>}
-            </motion.div>
+
           </div>
         </motion.div>
       )}
